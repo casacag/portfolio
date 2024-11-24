@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio di Alessio Cocco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Portfolio di Alessio Cocco</h1>
+            <ul>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sezione Chi Sono -->
+    <section id="about">
+        <h2>Chi Sono</h2>
+        <p>Ciao, sono Alessio Cocco!
+            Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività.
+            
+            Dai un’occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!
+            
+            </p>
+    </section>
+
+    <!-- Sezione Portfolio -->
+    <section id="portfolio">
+        <h2>I Miei Lavori</h2>
+        <div class="project">
+            <div>
+                <h3>Progetto 1: Web App</h3>
+                <p>Questo gioco è stato creato con html, css e js. Le immagini sono state generate con l'intelligenza artificiale.</p>
+            </div>
+            <img src="biancaneve.png" alt="Immagine Web App">
+            <a href="https://casacag.github.io/BiancanevaGame/" target="_blank">Guarda il progetto</a>
+        </div>
+        <div class="project">
+            <div>
+                <h3>Progetto 2: Videogioco 1</h3>
+                <p>In questo progetto mi sono occupato della gestione della scelta randomica dei vari elementi e della gestione del server e del client.</p>
+            </div>
+            <img src="distorti.png" alt="Immagine del progetto">
+            <a href="https://federyuk91.itch.io/distordi" target="_blank">Guarda il progetto</a>
+        </div>
+        <div class="project">
+            <div>
+                <h3>Progetto 3: Sito Web</h3>
+                <p>Questo progetto è stato pensato per dare delle raccomandazioni ai miei ospiti.</p>
+            </div>
+            <img src="raccomandazioni.png" alt="Immagine del progetto">
+            <a href="https://casacag.github.io/raccomandazioni/" target="_blank">Guarda il progetto</a>
+        </div>
+    </section>
+    
+
+    
+    <section id="contact">
+        <h2>Contatti</h2>
+        <p>Per collaborazioni o domande, contattami qui:</p>
+        <form action="mailto:alessio.cocco1995@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Alessio Cocco. Tutti i diritti riservati.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

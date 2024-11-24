@@ -1,0 +1,209 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0 20px;
+}
+
+/* Header */
+/* Stile base per l'header */
+header {
+    position: fixed; /* Resta fisso in cima */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 20px; /* Padding interno */
+}
+
+/* Calcoliamo l'altezza dinamica */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #0056b3;
+}
+
+/* Spazio aggiunto per compensare l'header */
+body {
+    padding-top: 70px; /* Altezza dell'header */
+}
+
+/* Stile responsive per mobile */
+@media (max-width: 768px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    header ul li {
+        margin: 0 10px;
+    }
+
+    body {
+        padding-top: 90px; /* Altezza extra per schermi piccoli */
+    }
+}
+
+
+
+/* Sezioni */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Progetti */
+/* Stile per la sezione portfolio */
+/* Stile base per la sezione portfolio */
+.project {
+    display: grid; /* Usa il layout a griglia */
+    grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
+    gap: 20px; /* Spazio tra gli elementi */
+    align-items: center; /* Allinea verticalmente gli elementi */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Bordo per separare i progetti */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Stile per gli elementi interni */
+.project h3 {
+    margin: 0 0 10px;
+    grid-column: 1 / 2; /* Occupa la prima colonna */
+}
+
+.project p {
+    margin: 0;
+    grid-column: 1 / 2; /* Occupa la prima colonna */
+}
+
+.project img {
+    grid-column: 2 / 3; /* Posiziona l'immagine nella seconda colonna */
+    max-width: 120px; /* Limita la larghezza */
+    height: auto;
+    border-radius: 8px;
+    justify-self: center; /* Centra l'immagine nella colonna */
+}
+
+.project a {
+    grid-column: 3 / 4; /* Posiziona il link nella terza colonna */
+    text-align: right;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Stile responsive per dispositivi mobili */
+@media (max-width: 768px) {
+    .project {
+        display: flex; /* Torna al layout flessibile */
+        flex-direction: column; /* Disposizione verticale */
+        align-items: flex-start; /* Allinea gli elementi a sinistra */
+    }
+
+    .project img {
+        margin: 10px 0; /* Spazio sopra e sotto l'immagine */
+        max-width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    }
+
+    .project a {
+        margin-top: 10px;
+        text-align: left; /* Allinea il link a sinistra */
+    }
+}
+
+
+
+
+/* Contatti */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
