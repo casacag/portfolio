@@ -137,16 +137,16 @@ section {
 /* Stile per gli elementi interni */
 .project h3 {
     margin: 0 0 10px;
-    grid-column: 1 / 2; /* Occupa la prima colonna */
+    grid-column: 2 / 3; /* Occupa la seconda colonna */
 }
 
 .project p {
     margin: 0;
-    grid-column: 1 / 2; /* Occupa la prima colonna */
+    grid-column: 2 / 3; /* Occupa la seconda colonna */
 }
 
 .project img {
-    grid-column: 2 / 3; /* Posiziona l'immagine nella seconda colonna */
+    grid-column: 1 / 2; /* Posiziona l'immagine nella seconda colonna */
     max-width: 350px; /* Limita la larghezza */
     height: auto;
     border-radius: 8px;
