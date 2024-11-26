@@ -1,5 +1,11 @@
 {
     "it": {
+         "headerTitle": "Portfolio di Alessio Cocco",
+        "navLinks": {
+            "about": "Chi Sono",
+            "portfolio": "Portfolio",
+            "contact": "Contatti"
+        },
         "aboutTitle": "Chi Sono",
         "aboutText": "Salve, sono Alessio Cocco! Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un’occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
         "portfolioTitle": "I Miei Lavori",
@@ -12,6 +18,13 @@
             "technologies": "Tecnologie"
         },
         "project2": {
+            "en": {
+        "headerTitle": "Alessio Cocco's Portfolio",
+        "navLinks": {
+            "about": "About Me",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        },
             "title": "Progetto 2: Videogioco 1",
             "role": "Ruolo: Programmazione lato server e gestione funzionalità online.",
             "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un’esperienza fluida per i giocatori.",
