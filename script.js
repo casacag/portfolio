@@ -1,13 +1,18 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const languageSelector = document.querySelectorAll(".flag");
     let currentLang = "it"; // Default language
 
     function loadTranslations(lang) {
-        fetch("translations.json")
+        fetch("./translations.json")
             .then(response => response.json())
             .then(data => {
                 const translations = data[lang];
+                if (!translations) {
+                    console.error(`Traduzioni non trovate per la lingua: ${lang}`);
+                    return;
+                }
+
+                console.log("Traduzioni per la lingua:", translations);
 
                 // Aggiorna il titolo dell'intestazione
                 document.querySelector("header h1").textContent = translations.headerTitle;
