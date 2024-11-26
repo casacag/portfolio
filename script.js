@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const languageSelector = document.querySelectorAll(".flag");
-    let currentLang = "it"; // Default language
+    let currentLang = "it"; // Lingua di default
 
     function loadTranslations(lang) {
         fetch("./translations.json")
@@ -31,12 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
 
                 // Aggiorna i progetti
+                const projectKeys = ["project1", "project2", "project3"]; // Specifica le chiavi dei progetti nel JSON
                 document.querySelectorAll(".project").forEach((project, index) => {
-                    const projectData = translations[`project${index}`];
+                    const projectData = translations[projectKeys[index]]; // Accedi alle chiavi direttamente
                     if (projectData) {
                         project.querySelector("h3").textContent = projectData.title;
 
-                        // Aggiorna i dettagli dei progetti
+                        // Aggiorna i dettagli del progetto
                         const paragraphs = project.querySelectorAll("p");
                         paragraphs[0].innerHTML = `${projectData.role}`;
                         paragraphs[1].innerHTML = `${projectData.description}`;
