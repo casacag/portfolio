@@ -1,11 +1,5 @@
 {
     "it": {
-        "headerTitle": "Portfolio di Alessio Cocco",
-        "navLinks": {
-            "about": "Chi Sono",
-            "portfolio": "Portfolio",
-            "contact": "Contatti"
-        },
         "aboutTitle": "Chi Sono",
         "aboutText": "Salve, sono Alessio Cocco! Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un’occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
         "portfolioTitle": "I Miei Lavori",
@@ -15,28 +9,22 @@
             "title": "Progetto 1: Web App",
             "role": "Ruolo: Ideazione e sviluppo completo.",
             "description": "Un progetto interattivo creato per un laboratorio, sviluppato in soli 6 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
-            "technologies": "Tecnologie"
+            "technologies": "Tecnologie: JavaScript: Logica e dinamiche di gioco. HTML e CSS: Struttura e stile grafico."
         },
         "project2": {
             "title": "Progetto 2: Videogioco 1",
             "role": "Ruolo: Programmazione lato server e gestione funzionalità online.",
             "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un’esperienza fluida per i giocatori.",
-            "technologies": "Tecnologie"
+            "technologies": "Tecnologie: Unity: Sviluppo delle meccaniche di gioco. Photon: Implementazione del networking."
         },
         "project3": {
             "title": "Progetto 3: Sito Web",
             "role": "Ruolo: Sviluppo e progettazione completa.",
             "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all’uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
-            "technologies": "Tecnologie"
+            "technologies": "Tecnologie: HTML e CSS: Struttura e design del sito. JavaScript: Funzionalità dinamiche e interattive. JSON: Implementazione della traduzione in più lingue. traducimi queste frasi in inglese."
         }
     },
     "en": {
-        "headerTitle": "Alessio Cocco's Portfolio",
-        "navLinks": {
-            "about": "About Me",
-            "portfolio": "Portfolio",
-            "contact": "Contact"
-        },
         "aboutTitle": "About Me",
         "aboutText": "Hi, I’m Alessio Cocco! I’m a Computer Engineering student with a passion for technology and design. Besides being a property manager, I dedicate myself to creating websites, apps, and games that combine functionality and creativity. Check out my projects below and discover how I bring ideas to life!",
         "portfolioTitle": "My Work",
@@ -46,19 +34,19 @@
             "title": "Project 1: Web App",
             "role": "Role: Ideation and complete development.",
             "description": "An interactive project created for a workshop, developed in just 6 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
-            "technologies": "Technologies"
+            "technologies": "Technologies: JavaScript: Game logic and dynamics. HTML and CSS: Structure and visual style."
         },
         "project2": {
             "title": "Project 2: Video Game 1",
             "role": "Role: Server-side programming and online functionality management.",
             "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
-            "technologies": "Technologies"
+            "technologies": "Technologies: Unity: Development of game mechanics. Photon: Networking implementation."
         },
         "project3": {
             "title": "Project 3: Website",
             "role": "Role: Development and complete design.",
             "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
-            "technologies": "Technologies"
+            "technologies": "Technologies: HTML and CSS: Structure and site design. JavaScript: Dynamic and interactive functionalities. JSON: Multilingual translation implementation."
         }
     }
 }
