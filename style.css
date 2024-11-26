@@ -124,7 +124,7 @@ section {
 .project {
     display: grid; /* Usa il layout a griglia */
     grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
-    gap: 100px; /* Spazio tra gli elementi */
+    gap: 200px; /* Spazio tra gli elementi */
     align-items: center;
     justify-content: space-between;/* Allinea verticalmente gli elementi */
     margin-bottom: 20px;
@@ -137,16 +137,16 @@ section {
 /* Stile per gli elementi interni */
 .project h3 {
     margin: 0 0 10px;
-    grid-column: 2 / 3; /* Occupa la seconda colonna */
+    grid-column: 1 / 2; /* Occupa la prima colonna */
 }
 
 .project p {
     margin: 0;
-    grid-column: 2 / 3; /* Occupa la seconda colonna */
+    grid-column: 1 / 2; /* Occupa la prima colonna */
 }
 
 .project img {
-    grid-column: 1 / 2; /* Posiziona l'immagine nella seconda colonna */
+    grid-column: 2 / 3; /* Posiziona l'immagine nella seconda colonna */
     max-width: 350px; /* Limita la larghezza */
     height: auto;
     border-radius: 8px;
