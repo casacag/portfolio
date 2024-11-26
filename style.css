@@ -110,17 +110,32 @@ body {
 
 
 /* Sezioni */
+/* Sezioni */
 section {
     margin: 20px 0;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il contenuto */
+    flex-direction: column; /* Allinea gli elementi verticalmente */
 }
 
 /* Progetti */
 /* Stile per la sezione portfolio */
 /* Stile base per la sezione portfolio */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra i progetti orizzontalmente */
+    justify-content: flex-start; /* Puoi anche usarlo per gestire l'altezza (top allineato) */
+    width: 100%; /* Garantisce che il contenitore occupi tutta la larghezza */
+    max-width: 1200px; /* Puoi limitare la larghezza massima della sezione per non farla diventare troppo larga */
+    margin: 0 auto; /* Centra il contenitore */
+}
+
+/* Stile per la sezione progetto */
 .project {
     display: grid; /* Usa il layout a griglia */
     grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
@@ -131,6 +146,8 @@ section {
     border: 1px solid #ddd; /* Bordo per separare i progetti */
     border-radius: 8px;
     background-color: #f9f9f9;
+    width: 100%; /* Fa in modo che il progetto occupi tutta la larghezza del contenitore */
+    max-width: 1000px; /* Imposta una larghezza massima per ciascun progetto */
 }
 
 /* Stile per gli elementi interni */
@@ -157,6 +174,29 @@ section {
     text-align: right;
     color: #007BFF;
     text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Stile responsive per dispositivi mobili */
+@media (max-width: 768px) {
+    .project {
+        display: flex; /* Torna al layout flessibile */
+        flex-direction: column; /* Disposizione verticale */
+        align-items: flex-start; /* Allinea gli elementi a sinistra */
+    }
+
+    .project img {
+        margin: 10px 0; /* Spazio sopra e sotto l'immagine */
+        max-width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    }
+
+    .project a {
+        margin-top: 10px;
+        text-align: left; /* Allinea il link a sinistra */
+    }
 }
 
 .project a:hover {
