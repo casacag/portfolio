@@ -125,7 +125,8 @@ section {
     display: grid; /* Usa il layout a griglia */
     grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
     gap: 20px; /* Spazio tra gli elementi */
-    align-items: center; /* Allinea verticalmente gli elementi */
+    align-items: center;
+    justify-content: space-between;/* Allinea verticalmente gli elementi */
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd; /* Bordo per separare i progetti */
@@ -146,7 +147,7 @@ section {
 
 .project img {
     grid-column: 2 / 3; /* Posiziona l'immagine nella seconda colonna */
-    max-width: 120px; /* Limita la larghezza */
+    max-width: 100%; /* Limita la larghezza */
     height: auto;
     border-radius: 8px;
     justify-self: center; /* Centra l'immagine nella colonna */
