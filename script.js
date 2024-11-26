@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Aggiorna i progetti
                 document.querySelectorAll(".project").forEach((project, index) => {
-                    const projectData = translations[`project${index + 1}`];
+                    const projectData = translations[`project${index}`];
                     if (projectData) {
                         project.querySelector("h3").textContent = projectData.title;
 
