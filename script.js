@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const paragraphs = project.querySelectorAll("p");
                         paragraphs[0].textContent = projectData.role;
                         paragraphs[1].textContent = projectData.description;
-                        paragraphs[2].textContent = projectData.tecnologies;
+                       project.querySelector("b").textContent = projects[`project${index + 1}`].technologies;
                     }
                 });
             })
