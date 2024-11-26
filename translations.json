@@ -52,7 +52,7 @@
             "title": "Project 2: Video Game 1",
             "role": "<b>Role</b>: Server-side programming and online functionality management.",
             "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
-            "technologies": "<b>Technologies: Unity, Photon"
+            "technologies": "<b>Technologies</b>: Unity, Photon"
         },
         "project3": {
             "title": "Project 3: Website",
