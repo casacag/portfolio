@@ -147,7 +147,7 @@ section {
 
 .project img {
     grid-column: 2 / 3; /* Posiziona l'immagine nella seconda colonna */
-    max-width: 100%; /* Limita la larghezza */
+    max-width: 160px; /* Limita la larghezza */
     height: auto;
     border-radius: 8px;
     justify-self: center; /* Centra l'immagine nella colonna */
