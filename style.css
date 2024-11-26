@@ -179,7 +179,8 @@ section {
 
     .project a {
         margin-top: 10px;
-        text-align: left; /* Allinea il link a sinistra */
+        text-align: left; 
+        margin-right: 50px;
     }
 }
 
