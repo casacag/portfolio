@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const languageSelector = document.querySelectorAll(".flag");
     let currentLang = "it"; // Default language
@@ -8,53 +9,50 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
                 const translations = data[lang];
 
-            // Aggiorna il titolo dell'intestazione
-            document.querySelector("header h1").textContent = translations.headerTitle;
+                // Aggiorna il titolo dell'intestazione
+                document.querySelector("header h1").textContent = translations.headerTitle;
 
-            // Aggiorna i link di navigazione
-            const navLinks = document.querySelectorAll("nav ul li a");
-            navLinks[0].textContent = translations.navLinks.about;
-            navLinks[1].textContent = translations.navLinks.portfolio;
-            navLinks[2].textContent = translations.navLinks.contact;
+                // Aggiorna i link di navigazione
+                const navLinks = document.querySelectorAll("nav ul li a");
+                navLinks[0].textContent = translations.navLinks.about;
+                navLinks[1].textContent = translations.navLinks.portfolio;
+                navLinks[2].textContent = translations.navLinks.contact;
 
-            // Aggiorna la sezione "Chi Sono"
-            document.querySelector("#about h2").textContent = translations.aboutTitle;
-            document.querySelector("#about p").textContent = translations.aboutText;
-
-            // Aggiorna la sezione "Portfolio"
-            document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
-
-            // Aggiorna la sezione "Contatti"
-            document.querySelector("#contact h2").textContent = translations.contactTitle;
-            document.querySelector("#contact p").textContent = translations.contactText;
-
-                const translations = data[lang];
+                // Aggiorna la sezione "Chi Sono"
                 document.querySelector("#about h2").textContent = translations.aboutTitle;
                 document.querySelector("#about p").textContent = translations.aboutText;
+
+                // Aggiorna la sezione "Portfolio"
                 document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
+
+                // Aggiorna la sezione "Contatti"
                 document.querySelector("#contact h2").textContent = translations.contactTitle;
                 document.querySelector("#contact p").textContent = translations.contactText;
-                // Update projects
-                const projects = translations;
+
+                // Aggiorna i progetti
                 document.querySelectorAll(".project").forEach((project, index) => {
-                    project.querySelector("h3").textContent = projects[`project${index + 1}`].title;
-                    const paragraphs = project.querySelectorAll("p");
-                    paragraphs[0].textContent = projects[`project${index + 1}`].role;
-                    paragraphs[1].textContent = projects[`project${index + 1}`].description;
-                    project.querySelector("b").textContent = projects[`project${index + 1}`].technologies;
+                    const projectData = translations[`project${index + 1}`];
+                    if (projectData) {
+                        project.querySelector("h3").textContent = projectData.title;
+                        const paragraphs = project.querySelectorAll("p");
+                        paragraphs[0].textContent = projectData.role;
+                        paragraphs[1].textContent = projectData.description;
+                        project.querySelector("b").textContent = projectData.technologies;
+                    }
                 });
-            });
+            })
+            .catch(error => console.error("Errore durante il caricamento delle traduzioni:", error));
     }
 
-    // Change language on click
+    // Cambia lingua al click sulla bandiera
     languageSelector.forEach(flag => {
         flag.addEventListener("click", () => {
-            currentLang = flag.id;
+            currentLang = flag.id; // L'id della bandiera deve corrispondere alla lingua
             loadTranslations(currentLang);
         });
     });
 
-    // Load default language on page load
+    // Carica la lingua di default all'avvio della pagina
     loadTranslations(currentLang);
 });
 
