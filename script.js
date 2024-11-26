@@ -7,6 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(data => {
                 const translations = data[lang];
+
+            // Aggiorna il titolo dell'intestazione
+            document.querySelector("header h1").textContent = translations.headerTitle;
+
+            // Aggiorna i link di navigazione
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks[0].textContent = translations.navLinks.about;
+            navLinks[1].textContent = translations.navLinks.portfolio;
+            navLinks[2].textContent = translations.navLinks.contact;
+
+            // Aggiorna la sezione "Chi Sono"
+            document.querySelector("#about h2").textContent = translations.aboutTitle;
+            document.querySelector("#about p").textContent = translations.aboutText;
+
+            // Aggiorna la sezione "Portfolio"
+            document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
+
+            // Aggiorna la sezione "Contatti"
+            document.querySelector("#contact h2").textContent = translations.contactTitle;
+            document.querySelector("#contact p").textContent = translations.contactText;
+
+                const translations = data[lang];
                 document.querySelector("#about h2").textContent = translations.aboutTitle;
                 document.querySelector("#about p").textContent = translations.aboutText;
                 document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
