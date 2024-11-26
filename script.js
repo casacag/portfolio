@@ -30,21 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Aggiorna la sezione "Portfolio"
                 document.querySelector("#portfolio h2").textContent = translations.portfolioTitle;
 
-                // Aggiorna la sezione "Contatti"
-                document.querySelector("#contact h2").textContent = translations.contactTitle;
-                document.querySelector("#contact p").textContent = translations.contactText;
-
                 // Aggiorna i progetti
                 document.querySelectorAll(".project").forEach((project, index) => {
                     const projectData = translations[`project${index + 1}`];
                     if (projectData) {
                         project.querySelector("h3").textContent = projectData.title;
+                        
                         const paragraphs = project.querySelectorAll("p");
-                        paragraphs[0].textContent = projectData.role;
-                        paragraphs[1].textContent = projectData.description;
-                       project.querySelector("b").textContent = projects[`project${index + 1}`].technologies;
+                        paragraphs[0].innerHTML = `<b>${projectData.role}</b>`;
+                        paragraphs[1].innerHTML = `<b>${projectData.description}</b>`;
+                        paragraphs[2].innerHTML = `<b>${projectData.technologies}</b>`;
                     }
                 });
+
+                // Aggiorna la sezione "Contatti"
+                document.querySelector("#contact h2").textContent = translations.contactTitle;
+                document.querySelector("#contact p").textContent = translations.contactText;
+
+                
             })
             .catch(error => console.error("Errore durante il caricamento delle traduzioni:", error));
     }
@@ -56,6 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
             loadTranslations(currentLang);
         });
     });
+
+    // Carica la lingua di default all'avvio della pagina
+    loadTranslations(currentLang);
+});
 
     // Carica la lingua di default all'avvio della pagina
     loadTranslations(currentLang);
