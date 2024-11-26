@@ -12,6 +12,22 @@ body {
     background-color: #f4f4f4;
     padding: 0 20px;
 }
+.language-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.flag {
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flag:hover {
+    transform: scale(1.2);
+}
+
 
 /* Header */
 /* Stile base per l'header */
