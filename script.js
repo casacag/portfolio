@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     const projectData = translations[`project${index + 1}`];
                     if (projectData) {
                         project.querySelector("h3").textContent = projectData.title;
-                        
+
+                        // Aggiorna i dettagli dei progetti
                         const paragraphs = project.querySelectorAll("p");
                         paragraphs[0].innerHTML = `<b>${projectData.role}</b>`;
                         paragraphs[1].innerHTML = `<b>${projectData.description}</b>`;
@@ -46,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Aggiorna la sezione "Contatti"
                 document.querySelector("#contact h2").textContent = translations.contactTitle;
                 document.querySelector("#contact p").textContent = translations.contactText;
-
-                
             })
             .catch(error => console.error("Errore durante il caricamento delle traduzioni:", error));
     }
@@ -64,7 +63,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTranslations(currentLang);
 });
 
-    // Carica la lingua di default all'avvio della pagina
-    loadTranslations(currentLang);
-});
+
 
