@@ -11,7 +11,7 @@
         "portfolioTitle": "I Miei Lavori",
         "contactTitle": "Contatti",
         "contactText": "Per collaborazioni o domande, contattami qui:",
-             "project1": {
+        "project1": {
             "title": "Progetto 1: Web App",
             "role": "Ruolo: Ideazione e sviluppo completo.",
             "description": "Un progetto interattivo creato per un laboratorio, sviluppato in soli 6 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
@@ -42,7 +42,7 @@
         "portfolioTitle": "My Work",
         "contactTitle": "Contact",
         "contactText": "For collaborations or questions, contact me here:",
-          "project1": {
+        "project1": {
             "title": "Project 1: Web App",
             "role": "Role: Ideation and complete development.",
             "description": "An interactive project created for a workshop, developed in just 6 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
