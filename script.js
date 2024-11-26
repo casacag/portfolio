@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         // Aggiorna i dettagli dei progetti
                         const paragraphs = project.querySelectorAll("p");
-                        paragraphs[0].innerHTML = `<b>${projectData.role}</b>`;
-                        paragraphs[1].innerHTML = `<b>${projectData.description}</b>`;
-                        paragraphs[2].innerHTML = `<b>${projectData.technologies}</b>`;
+                        paragraphs[0].innerHTML = `${projectData.role}`;
+                        paragraphs[1].innerHTML = `${projectData.description}`;
+                        paragraphs[2].innerHTML = `${projectData.technologies}`;
                     }
                 });
 
