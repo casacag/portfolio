@@ -124,7 +124,7 @@ section {
 .project {
     display: grid; /* Usa il layout a griglia */
     grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
-    gap: 40px; /* Spazio tra gli elementi */
+    gap: 100px; /* Spazio tra gli elementi */
     align-items: center;
     justify-content: space-between;/* Allinea verticalmente gli elementi */
     margin-bottom: 20px;
