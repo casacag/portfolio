@@ -159,17 +159,22 @@ section {
     justify-self: center; /* Centra l'immagine nella colonna */
 }
 
-.project a {
-    grid-column: 3 / 4; /* Posiziona il link nella terza colonna */
-    text-align: right;
-    color: #007BFF;
-    text-decoration: none;
-    margin-right: 75px;
+.project-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
-.project a:hover {
-    text-decoration: underline;
+.project-button:hover {
+    background-color: #0056b3;
 }
+
 
 /* Stile responsive per dispositivi mobili */
 @media (max-width: 768px) {
