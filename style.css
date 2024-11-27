@@ -253,8 +253,8 @@ section {
 #chatbot-toggle {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    width: 20px;
+    right: 60px;
+    width: 60px;
     height: 20px;
     border: none;
     background: none;
@@ -263,16 +263,11 @@ section {
 }
 
 #chatbot-toggle img {
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
 }
-@media (min-width: 768px) {
-    .chatbot-loggle img {
-        width: 80px;  /* Dimensione per desktop */
-        height: 80px;
-    }
-}
+
 
 /* Header del chatbot */
 #chatbot-header {
