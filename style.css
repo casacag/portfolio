@@ -253,9 +253,9 @@ section {
 #chatbot-toggle {
     position: fixed;
     bottom: 20px;
-    right: 60px;
+    right: 20px;
     width: 60px;
-    height: 20px;
+    height: 60px;
     border: none;
     background: none;
     cursor: pointer;
