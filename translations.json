@@ -16,7 +16,7 @@
             "role": "<b>Ruolo</b>: Ideazione e sviluppo completo.",
             "description": "Un progetto interattivo creato per un laboratorio, sviluppato in soli 6 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
             "technologies": "<b>Tecnologie</b>: HTML, CSS, JavaScript",
-            "linkText": "Guarda il progetto",       
+            "buttonText": "Guarda il progetto",       
             "linkHref": "https://casacag.github.io/BiancanevaGame/"
         },
         "project2": {
@@ -24,7 +24,7 @@
             "role": "<b>Ruolo</b>: Programmazione lato server e gestione funzionalità online.",
             "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un’esperienza fluida per i giocatori.",
             "technologies": "<b>Tecnologie</b>: Unity, Photon",
-            "linkText": "Guarda il progetto",       
+            "buttonText": "Guarda il progetto",       
             "linkHref": "https://federyuk91.itch.io/distordi"
         },
         "project3": {
@@ -32,7 +32,7 @@
             "role": "<b>Ruolo</b>: Sviluppo e progettazione completa.",
             "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all’uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
             "technologies": "<b>Tecnologie</b>: HTML, CSS, JavaScript, JSON",
-            "linkText": "Guarda il progetto",       
+            "buttonText": "Guarda il progetto",       
             "linkHref": "https://casacag.github.io/raccomandazioni/"
         }
     },
@@ -53,7 +53,7 @@
             "role": "<b>Role</b>: Ideation and complete development.",
             "description": "An interactive project created for a workshop, developed in just 6 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
             "technologies": "<b>Technologies</b>: HTML, CSS, JavaScript",
-            "linkText": "See the project",       
+            "buttonText": "See the project",       
             "linkHref": "https://casacag.github.io/BiancanevaGame/"
         },
         "project2": {
@@ -61,7 +61,7 @@
             "role": "<b>Role</b>: Server-side programming and online functionality management.",
             "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
             "technologies": "<b>Technologies</b>: Unity, Photon",
-            "linkText": "See the project",       
+            "buttonText": "See the project",       
             "linkHref": "https://federyuk91.itch.io/distordi"
         },
         "project3": {
@@ -69,7 +69,7 @@
             "role": "<b>Role</b>: Development and complete design.",
             "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
             "technologies": "<b>Tecnologies</b>: HTML, CSS, JavaScript, JSON",
-            "linkText": "See the project",
+            "buttonText": "See the project",
             "linkHref": "https://casacag.github.io/raccomandazioni/"
         }
     }
