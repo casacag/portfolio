@@ -267,6 +267,12 @@ section {
     height: 20px;
     object-fit: cover;
 }
+@media (min-width: 768px) {
+    .chatbot-loggle img {
+        width: 80px;  /* Dimensione per desktop */
+        height: 80px;
+    }
+}
 
 /* Header del chatbot */
 #chatbot-header {
