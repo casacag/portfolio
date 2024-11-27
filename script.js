@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         paragraphs[1].innerHTML = `${projectData.description}`;
                         paragraphs[2].innerHTML = `${projectData.technologies}`;
                         //Traduci link
-                        const link = project.querySelector("a");
-                        link.textContent = projectData.linkText;
-                        link.href = projectData.linkHref;
+                        const button = project.querySelector(".project-button");
+                        button.textContent = projectData.buttonText; // Testo del pulsante
+                        button.onclick = () => window.open(projectData.linkHref, "_blank");
                     }
                 });
 
