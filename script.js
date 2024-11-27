@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         paragraphs[0].innerHTML = `${projectData.role}`;
                         paragraphs[1].innerHTML = `${projectData.description}`;
                         paragraphs[2].innerHTML = `${projectData.technologies}`;
+                        //Traduci link
+                        const link = project.querySelector("a");
+                        link.textContent = projectData.linkText;
+                        link.href = projectData.linkHref;
                     }
                 });
 
