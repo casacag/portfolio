@@ -356,6 +356,22 @@ section {
 .language-flag:hover {
     transform: scale(1.2);
 }
+#close-chatbot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Sfondo trasparente per adattarsi al contenitore */
+    border: none; /* Nessun bordo */
+    color: white; /* Colore bianco */
+    font-size: 18px; /* Dimensione del carattere */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    z-index: 1000; /* Assicurati che sia sopra gli altri elementi */
+}
+
+#close-chatbot:hover {
+    color: lightgray; /* Effetto hover per feedback visivo */
+}
+
 
 /* Footer */
 footer {
