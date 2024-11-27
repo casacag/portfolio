@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Perchè: "Biancaneve nasce da un laboratorio, io sono entrato in corso in un gruppo che aveva già scelto il linguaggio, ma non aveva ancora dato forma al progetto.",
                 Problematiche: "Le principali problematiche sono state il movimento di biancaneve e la gestione del tasto di restart.",
             },
-            Distorti: {
+            Distordi: {
                 Ruolo: "In Distordi il mio ruolo è stato quello di progettare la rete server e client, e migliorare la scelta randomica degli elementi in una lista.",
                 Perchè: "Distordi è stato realizzato per la Global Game Jam, eravamo 3 programmatori e un modellatore.",
                 Problematiche: "Da lato mio la parte più problematica è stata attribuire quali elementi adassero nel server e quali restassero in locale.",
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Why: "This project originated from a workshop. I joined midway, in a group that had already chosen the programming language but had not yet shaped the project.",
                 Issues: "The main issues were Biancaneve's movement and the handling of the restart button.",
             },
-            Distorti: {
+            Distordi: {
                 Role: "In Distordi, my role was to design the server-client network and improve the random selection of items from a list.",
                 Why: "Distordi was created for the Global Game Jam. We were 3 programmers and 1 modeler.",
                 Issues: "On my side, the most challenging part was determining which elements should be on the server and which should remain local.",
