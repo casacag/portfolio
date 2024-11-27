@@ -84,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
         it: {
             welcome: "Ciao! Come posso aiutarti?",
             defaultResponse:
-                "Per avere informazioni ulteriori inserire NomeProgetto Tematica. I nomi dei progetti sono Biancaneve, Distorti e Raccomandazioni. Le tematiche sono Ruolo, Perchè, Problematiche.",
+                "Per avere informazioni ulteriori inserire NomeProgetto Tematica. I nomi dei progetti sono Biancaneve, Distordi e Raccomandazioni. Le tematiche sono Ruolo, Perchè, Problematiche.",
         },
         en: {
             welcome: "Hi! How can I assist you?",
             defaultResponse:
-                "For further information, provide ProjectName Topic. The project names are Biancaneve, Distorti, and Recommendations. The topics are Role, Why, and Issues.",
+                "For further information, provide ProjectName Topic. The project names are Biancaneve, Distordi, and Recommendations. The topics are Role, Why, and Issues.",
         },
     };
 
@@ -97,36 +97,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const responses = {
         it: {
             Biancaneve: {
-                Ruolo: "In Biancaneve ho ricoperto il ruolo di sviluppatore front-end, lavorando principalmente su React.",
-                Perchè: "Biancaneve è stato creato per migliorare l'esperienza utente in un portale fiabesco.",
-                Problematiche: "Le principali problematiche sono state l'ottimizzazione delle immagini e l'accessibilità per dispositivi mobili.",
+                Ruolo: " Il mio ruolo è stato quello di creare l'idea di gioco e tutta la parte di programmazione, si può dire che è come se fosse un progetto personale.",
+                Perchè: "Biancaneve nasce da un laboratorio, io sono entrato in corso in un gruppo che aveva già scelto il linguaggio, ma non aveva ancora dato forma al progetto.",
+                Problematiche: "Le principali problematiche sono state il movimento di biancaneve e la gestione del tasto di restart.",
             },
             Distorti: {
-                Ruolo: "In Distorti il mio ruolo era sviluppatore full-stack, con focus su Node.js e MongoDB.",
-                Perchè: "Distorti è stato progettato per analizzare distorsioni cognitive nei dati utente.",
-                Problematiche: "Abbiamo affrontato problemi di scalabilità e latenza nei server.",
+                Ruolo: "In Distordi il mio ruolo è stato quello di progettare la rete server e client, e migliorare la scelta randomica degli elementi in una lista.",
+                Perchè: "Distordi è stato realizzato per la Global Game Jam, eravamo 3 programmatori e un modellatore.",
+                Problematiche: "Da lato mio la parte più problematica è stata attribuire quali elementi adassero nel server e quali restassero in locale.",
             },
             Raccomandazioni: {
-                Ruolo: "Per Raccomandazioni ho lavorato come data analyst, integrando algoritmi di machine learning.",
-                Perchè: "Il progetto è nato per offrire suggerimenti personalizzati agli utenti.",
-                Problematiche: "Sfide principali: bilanciare accuratezza e velocità nel motore di raccomandazione.",
+                Ruolo: " Per Raccomandazioni ho fatto tutto dalla scelta delle immagini allo sviluppo del sito, partendo da zero.",
+                Perchè: "Il progetto è nato per offrire suggerimenti ai miei ospiti di affitti brevi.",
+                Problematiche: "La sfide principale è stata fare un sito web multilingua è stato il mio primo progetto che prevedesse questo tipo di funzione.",
             },
         },
         en: {
             Biancaneve: {
-                Role: "In Biancaneve, I worked as a front-end developer, primarily using React.",
-                Why: "Biancaneve was created to enhance the user experience on a fairy tale portal.",
-                Issues: "The main issues were image optimization and accessibility for mobile devices.",
+                Role: "My role was to develop the game concept and handle all the programming aspects. You could say it's like a personal project.",
+                Why: "This project originated from a workshop. I joined midway, in a group that had already chosen the programming language but had not yet shaped the project.",
+                Issues: "The main issues were Biancaneve's movement and the handling of the restart button.",
             },
             Distorti: {
-                Role: "In Distorti, I was a full-stack developer, focusing on Node.js and MongoDB.",
-                Why: "Distorti was designed to analyze cognitive distortions in user data.",
-                Issues: "We faced challenges with server scalability and latency.",
+                Role: "In Distordi, my role was to design the server-client network and improve the random selection of items from a list.",
+                Why: "Distordi was created for the Global Game Jam. We were 3 programmers and 1 modeler.",
+                Issues: "On my side, the most challenging part was determining which elements should be on the server and which should remain local.",
             },
             Recommendations: {
-                Role: "For Recommendations, I worked as a data analyst, integrating machine learning algorithms.",
-                Why: "The project was developed to provide personalized suggestions to users.",
-                Issues: "Main challenges: balancing accuracy and speed in the recommendation engine.",
+                Role: "For Recommendations, I did everything from choosing the images to developing the website, starting from scratch.",
+                Why: "The project was created to offer recommendations to my short-term rental guests.",
+                Issues: "The main challenge was creating a multilingual website; it was my first project that required this type of functionality.",
             },
         },
     };
