@@ -371,6 +371,14 @@ section {
 #close-chatbot:hover {
     color: lightgray; /* Effetto hover per feedback visivo */
 }
+.chat-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url('chatsvgepro.svg');
+    background-size: contain; /* Assicura che l'immagine si adatti alla dimensione del contenitore */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+}
+
 
 
 /* Footer */
