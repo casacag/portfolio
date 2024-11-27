@@ -201,33 +201,25 @@ section {
 
 
 /* Contatti */
-form {
+.contact {
     display: flex;
-    flex-direction: column;
+    gap: 20px; /* Spazio tra le icone */
+    justify-content: center; /* Centrare il contenuto */
+    margin-top: 20px;
 }
 
-form label {
-    margin-top: 10px;
+.contact a {
+    text-decoration: none;
 }
 
-form input, form textarea, form button {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.contact img {
+    width: 40px; /* Dimensione dell'icona */
+    height: 40px;
+    transition: transform 0.3s;
 }
 
-form button {
-    background: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    margin-top: 10px;
-}
-
-form button:hover {
-    background: #0056b3;
+.contact img:hover {
+    transform: scale(1.2); /* Effetto di ingrandimento al passaggio del mouse */
 }
 
 /* Footer */
