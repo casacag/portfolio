@@ -119,21 +119,27 @@ section {
 }
 
 /* Progetti */
-/* Stile per la sezione portfolio */
-/* Stile base per la sezione portfolio */
 .project {
-    display: grid; /* Usa il layout a griglia */
-    grid-template-columns: 2fr auto 1fr; /* Tre colonne: descrizione, immagine, link */
-    gap: 200px; /* Spazio tra gli elementi */
-    align-items: center;
-    justify-content: space-between;/* Allinea verticalmente gli elementi */
+    display: flex; /* Layout di fallback per dispositivi mobili */
+    flex-direction: column; /* Disposizione verticale per schermi piccoli */
+    align-items: flex-start; /* Allinea a sinistra per schermi piccoli */
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ddd; /* Bordo per separare i progetti */
+    border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
 }
 
+/* Stile specifico per schermi larghi */
+@media (min-width: 769px) {
+    .project {
+        display: grid; /* Usa il layout a griglia solo per schermi larghi */
+        grid-template-columns: 2fr auto 1fr; /* Tre colonne */
+        gap: 200px; /* Spazio tra gli elementi */
+        align-items: center; /* Centra verticalmente per schermi larghi */
+        justify-content: space-between; /* Spazia gli elementi */
+    }
+}
 /* Stile per gli elementi interni */
 .project h3 {
     margin: 0 0 10px;
