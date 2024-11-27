@@ -158,6 +158,7 @@ section {
     text-align: right;
     color: #007BFF;
     text-decoration: none;
+    margin-right: 75px;
 }
 
 .project a:hover {
@@ -180,7 +181,7 @@ section {
     .project a {
         margin-top: 10px;
         text-align: left; 
-        margin-right: 50px;
+        
     }
 }
 
