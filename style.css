@@ -213,8 +213,8 @@ section {
 }
 
 .contact img {
-    width: 40px; /* Dimensione dell'icona */
-    height: 40px;
+    width: 20px; /* Dimensione dell'icona */
+    height: 20px;
     transition: transform 0.3s;
 }
 
