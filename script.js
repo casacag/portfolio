@@ -98,17 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
         it: {
             Biancaneve: {
                 Ruolo: " Il mio ruolo è stato quello di creare l'idea di gioco e tutta la parte di programmazione, si può dire che è come se fosse un progetto personale.",
-                Perchè: "Biancaneve nasce da un laboratorio, io sono entrato in corso in un gruppo che aveva già scelto il linguaggio, ma non aveva ancora dato forma al progetto.",
+                Perché: "Biancaneve nasce da un laboratorio, io sono entrato in corso in un gruppo che aveva già scelto il linguaggio, ma non aveva ancora dato forma al progetto.",
                 Problematiche: "Le principali problematiche sono state il movimento di biancaneve e la gestione del tasto di restart.",
             },
             Distordi: {
                 Ruolo: "In Distordi il mio ruolo è stato quello di progettare la rete server e client, e migliorare la scelta randomica degli elementi in una lista.",
-                Perchè: "Distordi è stato realizzato per la Global Game Jam, eravamo 3 programmatori e un modellatore.",
+                Perché: "Distordi è stato realizzato per la Global Game Jam, eravamo 3 programmatori e un modellatore.",
                 Problematiche: "Da lato mio la parte più problematica è stata attribuire quali elementi adassero nel server e quali restassero in locale.",
             },
             Raccomandazioni: {
                 Ruolo: " Per Raccomandazioni ho fatto tutto dalla scelta delle immagini allo sviluppo del sito, partendo da zero.",
-                Perchè: "Il progetto è nato per offrire suggerimenti ai miei ospiti di affitti brevi.",
+                Perché: "Il progetto è nato per offrire suggerimenti ai miei ospiti di affitti brevi.",
                 Problematiche: "La sfide principale è stata fare un sito web multilingua è stato il mio primo progetto che prevedesse questo tipo di funzione.",
             },
         },
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const topics = {
-            it: ["ruolo", "perchè", "problematiche"],
+            it: ["ruolo", "perché", "problematiche"],
             en: ["role", "why", "issues"],
         };
 
