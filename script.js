@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         it: {
             welcome: "Ciao! Come posso aiutarti?",
             defaultResponse:
-                "Per avere informazioni ulteriori inserire NomeProgetto Tematica. I nomi dei progetti sono Biancaneve, Distordi e Raccomandazioni. Le tematiche sono Ruolo, Perchè, Problematiche.",
+                "Per avere informazioni ulteriori inserire NomeProgetto Tematica. I nomi dei progetti sono Biancaneve, Distordi e Raccomandazioni. Le tematiche sono Ruolo, Perché, Problematiche.",
         },
         en: {
             welcome: "Hi! How can I assist you?",
