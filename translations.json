@@ -14,7 +14,7 @@
         "project1": {
             "title": "Progetto 1: Web App",
             "role": "<b>Ruolo</b>: Ideazione e sviluppo completo.",
-            "description": "Un progetto interattivo creato per un laboratorio, sviluppato in soli 6 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
+            "description": "Un progetto interattivo creato per un laboratorio, sviluppato in 4 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
             "technologies": "<b>Tecnologie</b>: HTML, CSS, JavaScript",
             "buttonText": "Guarda il progetto",       
             "linkHref": "https://casacag.github.io/BiancanevaGame/"
@@ -51,7 +51,7 @@
         "project1": {
             "title": "Project 1: Web App",
             "role": "<b>Role</b>: Ideation and complete development.",
-            "description": "An interactive project created for a workshop, developed in just 6 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
+            "description": "An interactive project created for a workshop, developed in 4 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
             "technologies": "<b>Technologies</b>: HTML, CSS, JavaScript",
             "buttonText": "See the project",       
             "linkHref": "https://casacag.github.io/BiancanevaGame/"
