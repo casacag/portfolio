@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
             "contactTitle": "Contatti",
             "contactText": "Per collaborazioni o domande, contattami qui:",
             "sendMessage": "Invia un messaggio",
+            "contactLabels": {
+                "email": "Email",
+                "github": "GitHub"
+            },
             "yourName": "Il tuo nome",
             "yourEmail": "La tua email",
             "yourMessage": "Il tuo messaggio",
@@ -34,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "experience": "Anni di Esperienza",
                 "technologies": "Tecnologie"
             },
+            "footer": "© 2024 Alessio Cocco. Tutti i diritti riservati.",
+            "chatbotPlaceholder": "Scrivi qui...",
+            "chatbotTitle": "Chatbot",
             "skills": {
                 "javascript": { "title": "JavaScript", "description": "Sviluppo dinamico e interattivo" },
                 "htmlcss": { "title": "HTML & CSS", "description": "Struttura e design responsive" },
@@ -47,21 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 "role": "Ruolo: Ideazione e sviluppo completo",
                 "description": "Un progetto interattivo creato per un laboratorio, sviluppato interamente a mano in soli 5 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
                 "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto"
+                "viewProject": "Guarda il progetto",
+                "altText": "Web App Biancaneve"
             },
             "project2": {
                 "title": "Progetto 2: Videogioco 1",
                 "role": "Ruolo: Programmazione lato server e gestione funzionalità online",
                 "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un'esperienza fluida per i giocatori.",
                 "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto"
+                "viewProject": "Guarda il progetto",
+                "altText": "Videogioco Distorti"
             },
             "project3": {
                 "title": "Progetto 3: Sito Web",
                 "role": "Ruolo: Sviluppo e progettazione completa",
                 "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all'uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
                 "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto"
+                "viewProject": "Guarda il progetto",
+                "altText": "Sito Web Raccomandazioni"
             }
         },
         "en": {
@@ -79,6 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
             "contactTitle": "Contact",
             "contactText": "For collaborations or questions, contact me here:",
             "sendMessage": "Send a message",
+            "contactLabels": {
+                "email": "Email",
+                "github": "GitHub"
+            },
             "yourName": "Your name",
             "yourEmail": "Your email",
             "yourMessage": "Your message",
@@ -94,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "experience": "Years of Experience",
                 "technologies": "Technologies"
             },
+            "footer": "© 2024 Alessio Cocco. All rights reserved.",
+            "chatbotPlaceholder": "Type here...",
+            "chatbotTitle": "Chatbot",
             "skills": {
                 "javascript": { "title": "JavaScript", "description": "Dynamic and interactive development" },
                 "htmlcss": { "title": "HTML & CSS", "description": "Structure and responsive design" },
@@ -107,21 +124,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 "role": "Role: Ideation and complete development",
                 "description": "An interactive project created for a workshop, developed entirely by hand in just 5 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
                 "technologies": "Technologies",
-                "viewProject": "View project"
+                "viewProject": "View project",
+                "altText": "Web App Biancaneve"
             },
             "project2": {
                 "title": "Project 2: Video Game 1",
                 "role": "Role: Server-side programming and online functionality management",
                 "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
                 "technologies": "Technologies",
-                "viewProject": "View project"
+                "viewProject": "View project",
+                "altText": "Video Game Distorti"
             },
             "project3": {
                 "title": "Project 3: Website",
                 "role": "Role: Development and complete design",
                 "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
                 "technologies": "Technologies",
-                "viewProject": "View project"
+                "viewProject": "View project",
+                "altText": "Website Recommendations"
             }
         }
     };
@@ -215,13 +235,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateText(card.querySelector("h3"), project.title);
                 
                 const role = card.querySelector(".project-role");
-                if (role) {
-                    const roleParts = project.role.split(':');
-                    role.innerHTML = `<strong>${roleParts[0]}:</strong>${roleParts[1] || ''}`;
+                if (role && project.role) {
+                    role.innerHTML = `<strong>${project.role}</strong>`;
                 }
                 
                 updateText(card.querySelector(".project-description"), project.description);
                 updateHTML(card.querySelector(".project-btn"), `${project.viewProject} <i class="fas fa-arrow-right"></i>`);
+                
+                // Update image alt text
+                const projectImg = card.querySelector(".project-image img");
+                if (projectImg && project.altText) {
+                    projectImg.alt = project.altText;
+                }
             }
         }
         
@@ -229,6 +254,13 @@ document.addEventListener("DOMContentLoaded", () => {
         updateText("#contact .section-title", t.contactTitle);
         updateText("#contact .section-subtitle", t.contactText);
         updateText(".contact-form h3", t.sendMessage);
+        
+        // Update Contact Labels
+        const contactLabels = document.querySelectorAll(".contact-details h3");
+        if (contactLabels.length >= 2 && t.contactLabels) {
+            contactLabels[0].textContent = t.contactLabels.email;
+            contactLabels[1].textContent = t.contactLabels.github;
+        }
         
         // Update Form placeholders
         const nameInput = document.querySelector('input[type="text"]');
@@ -240,7 +272,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const messageInput = document.querySelector('textarea');
         if (messageInput) messageInput.placeholder = t.yourMessage;
         
-        updateHTML('.contact-form .btn', `<i class="fas fa-paper-plane"></i> ${t.sendButton}`);
+        const formButton = document.querySelector('.contact-form button[type="submit"]');
+        if (formButton && t.sendButton) {
+            formButton.innerHTML = `<i class="fas fa-paper-plane"></i> ${t.sendButton}`;
+        }
         
         // Update Navigation Menu
         const navLinks = document.querySelectorAll('.nav-menu a');
@@ -249,6 +284,23 @@ document.addEventListener("DOMContentLoaded", () => {
             navLinks[1].textContent = t.navigation.skills;
             navLinks[2].textContent = t.navigation.portfolio;
             navLinks[3].textContent = t.navigation.contact;
+        }
+        
+        // Update Footer
+        const footerText = document.querySelector(".footer-text p");
+        if (footerText && t.footer) {
+            footerText.textContent = t.footer;
+        }
+        
+        // Update Chatbot placeholder and header
+        const chatbotInput = document.querySelector("#chatbot-input");
+        if (chatbotInput && t.chatbotPlaceholder) {
+            chatbotInput.placeholder = t.chatbotPlaceholder;
+        }
+        
+        const chatbotHeader = document.querySelector("#chatbot-header span");
+        if (chatbotHeader && t.chatbotTitle) {
+            chatbotHeader.textContent = t.chatbotTitle;
         }
     }
 
