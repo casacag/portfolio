@@ -1,0 +1,158 @@
+{
+    "it": {
+        "heroTitle": "Ciao, sono Alessio",
+        "heroSubtitle": "Trasformo idee in realtà digitale attraverso codice pulito e design funzionale",
+        "exploreProjects": "Esplora i Progetti",
+        "contactMe": "Contattami",
+        "greeting": "Salve, sono Alessio Cocco!",
+        "aboutTitle": "Chi Sono",
+        "aboutText": "Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
+        "skillsTitle": "Skills & Tecnologie",
+        "skillsSubtitle": "Le tecnologie con cui lavoro per creare esperienze digitali incredibili",
+        "portfolioTitle": "I Miei Lavori",
+        "portfolioSubtitle": "Una selezione dei miei progetti più significativi",
+        "contactTitle": "Contatti",
+        "contactText": "Per collaborazioni o domande, contattami qui:",
+        "sendMessage": "Invia un messaggio",
+        "yourName": "Il tuo nome",
+        "yourEmail": "La tua email",
+        "yourMessage": "Il tuo messaggio",
+        "sendButton": "Invia Messaggio",
+        "navigation": {
+            "about": "Chi Sono",
+            "skills": "Skills",
+            "portfolio": "I Miei Lavori",
+            "contact": "Contatti"
+        },
+        "stats": {
+            "projects": "Progetti",
+            "experience": "Anni di Esperienza",
+            "technologies": "Tecnologie"
+        },
+        "skills": {
+            "javascript": {
+                "title": "JavaScript",
+                "description": "Sviluppo dinamico e interattivo"
+            },
+            "htmlcss": {
+                "title": "HTML & CSS",
+                "description": "Struttura e design responsive"
+            },
+            "unity": {
+                "title": "Unity",
+                "description": "Sviluppo di videogiochi"
+            },
+            "backend": {
+                "title": "Backend",
+                "description": "Server e logica applicativa"
+            },
+            "github": {
+                "title": "Git & GitHub",
+                "description": "Controllo versioni e collaborazione"
+            },
+            "responsive": {
+                "title": "Responsive Design",
+                "description": "Design per tutti i dispositivi"
+            }
+        },
+        "project1": {
+            "title": "Progetto 1: Web App",
+            "role": "Ruolo: Ideazione e sviluppo completo",
+            "description": "Un progetto interattivo creato per un laboratorio, sviluppato interamente a mano in soli 5 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
+            "technologies": "Tecnologie",
+            "viewProject": "Guarda il progetto"
+        },
+        "project2": {
+            "title": "Progetto 2: Videogioco 1",
+            "role": "Ruolo: Programmazione lato server e gestione funzionalità online",
+            "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un'esperienza fluida per i giocatori.",
+            "technologies": "Tecnologie",
+            "viewProject": "Guarda il progetto"
+        },
+        "project3": {
+            "title": "Progetto 3: Sito Web",
+            "role": "Ruolo: Sviluppo e progettazione completa",
+            "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all'uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
+            "technologies": "Tecnologie",
+            "viewProject": "Guarda il progetto"
+        }
+    },
+    "en": {
+        "heroTitle": "Hi, I'm Alessio",
+        "heroSubtitle": "I transform ideas into digital reality through clean code and functional design",
+        "exploreProjects": "Explore Projects",
+        "contactMe": "Contact Me",
+        "greeting": "Hi, I'm Alessio Cocco!",
+        "aboutTitle": "About Me",
+        "aboutText": "I'm a Computer Engineering student with a passion for technology and design. Besides being a property manager, I dedicate myself to creating websites, apps, and games that combine functionality and creativity. Check out my projects below and discover how I bring ideas to digital life!",
+        "skillsTitle": "Skills & Technologies",
+        "skillsSubtitle": "The technologies I work with to create incredible digital experiences",
+        "portfolioTitle": "My Work",
+        "portfolioSubtitle": "A selection of my most significant projects",
+        "contactTitle": "Contact",
+        "contactText": "For collaborations or questions, contact me here:",
+        "sendMessage": "Send a message",
+        "yourName": "Your name",
+        "yourEmail": "Your email",
+        "yourMessage": "Your message",
+        "sendButton": "Send Message",
+        "navigation": {
+            "about": "About Me",
+            "skills": "Skills",
+            "portfolio": "My Work",
+            "contact": "Contact"
+        },
+        "stats": {
+            "projects": "Projects",
+            "experience": "Years of Experience",
+            "technologies": "Technologies"
+        },
+        "skills": {
+            "javascript": {
+                "title": "JavaScript",
+                "description": "Dynamic and interactive development"
+            },
+            "htmlcss": {
+                "title": "HTML & CSS",
+                "description": "Structure and responsive design"
+            },
+            "unity": {
+                "title": "Unity",
+                "description": "Game development"
+            },
+            "backend": {
+                "title": "Backend",
+                "description": "Server and application logic"
+            },
+            "github": {
+                "title": "Git & GitHub",
+                "description": "Version control and collaboration"
+            },
+            "responsive": {
+                "title": "Responsive Design",
+                "description": "Design for all devices"
+            }
+        },
+        "project1": {
+            "title": "Project 1: Web App",
+            "role": "Role: Ideation and complete development",
+            "description": "An interactive project created for a workshop, developed entirely by hand in just 5 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
+            "technologies": "Technologies",
+            "viewProject": "View project"
+        },
+        "project2": {
+            "title": "Project 2: Video Game 1",
+            "role": "Role: Server-side programming and online functionality management",
+            "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
+            "technologies": "Technologies",
+            "viewProject": "View project"
+        },
+        "project3": {
+            "title": "Project 3: Website",
+            "role": "Role: Development and complete design",
+            "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
+            "technologies": "Technologies",
+            "viewProject": "View project"
+        }
+    }
+}

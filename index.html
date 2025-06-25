@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0, minimum-scale=0.25">
+    <title>Portfolio di Alessio Cocco</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="modern-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Alessio Cocco</h1>
+                <span class="tagline">Software Developer</span>
+            </div>
+            <div class="nav-content">
+                <div class="language-selector">
+                    <img src="italiano.png" alt="Italiano" id="it" class="flag">
+                    <img src="inglese.png" alt="English" id="en" class="flag">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about">Chi Sono</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Ciao, sono Alessio</span>
+                </h1>
+                <p class="hero-subtitle">Trasformo idee in realtà digitale attraverso codice pulito e design funzionale</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Esplora i Progetti
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contattami
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <div class="dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="filename">portfolio.js</span>
+                        </div>
+                        <div class="code-content">
+                            <span class="keyword">const</span> <span class="variable">developer</span> = {<br>
+                            &nbsp;&nbsp;<span class="property">name</span>: <span class="string">'Alessio'</span>,<br>
+                            &nbsp;&nbsp;<span class="property">skills</span>: [<span class="string">'JS'</span>, <span class="string">'Unity'</span>, <span class="string">'Web'</span>],<br>
+                            &nbsp;&nbsp;<span class="property">passion</span>: <span class="string">'Innovazione'</span><br>
+                            };
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-down"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Chi Sono</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">Salve, sono Alessio Cocco!</p>
+                    <p>Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività.</p>
+                    <p>Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Progetti</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Anni di Esperienza</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Tecnologie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-photo">
+                        <img src="me.jpeg" alt="Alessio Cocco" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Tecnologie</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Le tecnologie con cui lavoro per creare esperienze digitali incredibili</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Sviluppo dinamico e interattivo</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML & CSS</h3>
+                    <p>Struttura e design responsive</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-unity"></i>
+                    </div>
+                    <h3>Unity</h3>
+                    <p>Sviluppo di videogiochi</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <p>Server e logica applicativa</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Controllo versioni e collaborazione</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Design per tutti i dispositivi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I Miei Lavori</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Una selezione dei miei progetti più significativi</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="biancaneve.png" alt="Web App Biancaneve">
+                        <div class="project-overlay">
+                            <a href="https://casacag.github.io/BiancanevaGame/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Progetto 1: Web App</h3>
+                        <p class="project-role"><strong>Ruolo:</strong> Ideazione e sviluppo completo.</p>
+                        <p class="project-description">Un progetto interattivo creato per un laboratorio, sviluppato interamente a mano in soli 5 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <a href="https://casacag.github.io/BiancanevaGame/" target="_blank" class="project-btn">
+                            Guarda il progetto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="distorti.png" alt="Videogioco Distorti">
+                        <div class="project-overlay">
+                            <a href="https://federyuk91.itch.io/distordi" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Progetto 2: Videogioco 1</h3>
+                        <p class="project-role"><strong>Ruolo:</strong> Programmazione lato server e gestione funzionalità online.</p>
+                        <p class="project-description">Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un'esperienza fluida per i giocatori.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">Photon</span>
+                            <span class="tech-tag">C#</span>
+                        </div>
+                        <a href="https://federyuk91.itch.io/distordi" target="_blank" class="project-btn">
+                            Guarda il progetto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="raccomandazioni.png" alt="Sito Web Raccomandazioni">
+                        <div class="project-overlay">
+                            <a href="https://casacag.github.io/raccomandazioni/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Progetto 3: Sito Web</h3>
+                        <p class="project-role"><strong>Ruolo:</strong> Sviluppo e progettazione completa.</p>
+                        <p class="project-description">Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all'uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">JSON</span>
+                        </div>
+                        <a href="https://casacag.github.io/raccomandazioni/" target="_blank" class="project-btn">
+                            Guarda il progetto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contatti</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Per collaborazioni o domande, contattami qui:</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:alessio.cocco1995@gmail.com">alessio.cocco1995@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/casacag" target="_blank">github.com/casacag</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Invia un messaggio</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Il tuo nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="La tua email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Il tuo messaggio" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Invia Messaggio
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <span>Chatbot</span>
+            <div id="language-selector">
+                <img src="italiano.png" alt="Italiano" class="language-flag" data-lang="it" />
+                <img src="inglese.png" alt="English" class="language-flag" data-lang="en" />
+            </div>
+            <button id="close-chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Scrivi qui..." />
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button id="chatbot-toggle">
+        <img src="logo_chat.png" alt="Chatbot" />
+    </button>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>© 2024 Alessio Cocco. Tutti i diritti riservati.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:alessio.cocco1995@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/casacag" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
