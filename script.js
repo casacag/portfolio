@@ -429,30 +429,21 @@ focusStyle.textContent = `
 `;
 document.head.appendChild(focusStyle);
 
-// ===== MOBILE MENU (SIMPLIFIED) =====
+// ===== MOBILE MENU =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Wait a bit for everything to load
     setTimeout(() => {
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         
-        console.log('📱 Mobile menu setup:', { hamburger, navMenu });
-        
         if (hamburger && navMenu) {
-            // Simple click handler
-            hamburger.addEventListener('click', function() {
-                console.log('🍔 Hamburger clicked!');
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
                 
                 // Toggle classes
                 this.classList.toggle('active');
                 navMenu.classList.toggle('active');
                 document.body.classList.toggle('menu-open');
-                
-                console.log('Classes after toggle:', {
-                    hamburger: this.className,
-                    navMenu: navMenu.className,
-                    body: document.body.className
-                });
             });
             
             // Close menu when clicking nav links
@@ -463,10 +454,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.classList.remove('menu-open');
                 });
             });
-        } else {
-            console.error('❌ Mobile menu elements not found!');
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
         }
-    }, 500);
+    }, 100);
 });
 
 // ===== SCROLL EFFECTS =====
