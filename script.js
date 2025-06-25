@@ -1,327 +1,151 @@
+// ===== SIMPLE TRANSLATION SYSTEM =====
 document.addEventListener("DOMContentLoaded", () => {
     const languageSelector = document.querySelectorAll(".flag");
-    let currentLang = "it"; // Default language
+    let currentLang = "it";
 
-    // Embedded translations as fallback for GitHub Pages
-    const translationsData = {
-        "it": {
-            "heroTitle": "Ciao, sono Alessio",
-            "heroSubtitle": "Trasformo idee in realtà digitale attraverso codice pulito e design funzionale",
-            "exploreProjects": "Esplora i Progetti",
-            "contactMe": "Contattami",
-            "greeting": "Salve, sono Alessio Cocco!",
-            "aboutTitle": "Chi Sono",
-            "aboutText": "Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
-            "skillsTitle": "Skills & Tecnologie",
-            "skillsSubtitle": "Le tecnologie con cui lavoro per creare esperienze digitali incredibili",
-            "portfolioTitle": "I Miei Lavori",
-            "portfolioSubtitle": "Una selezione dei miei progetti più significativi",
-            "contactTitle": "Contatti",
-            "contactText": "Per collaborazioni o domande, contattami qui:",
-            "sendMessage": "Invia un messaggio",
-            "contactLabels": {
-                "email": "Email",
-                "github": "GitHub"
-            },
-            "yourName": "Il tuo nome",
-            "yourEmail": "La tua email",
-            "yourMessage": "Il tuo messaggio",
-            "sendButton": "Invia Messaggio",
-            "navigation": {
-                "about": "Chi Sono",
-                "skills": "Skills",
-                "portfolio": "I Miei Lavori",
-                "contact": "Contatti"
-            },
-            "stats": {
-                "projects": "Progetti",
-                "experience": "Anni di Esperienza",
-                "technologies": "Tecnologie"
-            },
-            "footer": "© 2024 Alessio Cocco. Tutti i diritti riservati.",
-            "chatbotPlaceholder": "Scrivi qui...",
-            "chatbotTitle": "Chatbot",
-            "skills": {
-                "javascript": { "title": "JavaScript", "description": "Sviluppo dinamico e interattivo" },
-                "htmlcss": { "title": "HTML & CSS", "description": "Struttura e design responsive" },
-                "unity": { "title": "Unity", "description": "Sviluppo di videogiochi" },
-                "backend": { "title": "Backend", "description": "Server e logica applicativa" },
-                "github": { "title": "Git & GitHub", "description": "Controllo versioni e collaborazione" },
-                "responsive": { "title": "Responsive Design", "description": "Design per tutti i dispositivi" }
-            },
-            "project1": {
-                "title": "Progetto 1: Web App",
-                "role": "Ruolo: Ideazione e sviluppo completo",
-                "description": "Un progetto interattivo creato per un laboratorio, sviluppato interamente a mano in soli 5 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
-                "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto",
-                "altText": "Web App Biancaneve"
-            },
-            "project2": {
-                "title": "Progetto 2: Videogioco 1",
-                "role": "Ruolo: Programmazione lato server e gestione funzionalità online",
-                "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un'esperienza fluida per i giocatori.",
-                "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto",
-                "altText": "Videogioco Distorti"
-            },
-            "project3": {
-                "title": "Progetto 3: Sito Web",
-                "role": "Ruolo: Sviluppo e progettazione completa",
-                "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all'uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
-                "technologies": "Tecnologie",
-                "viewProject": "Guarda il progetto",
-                "altText": "Sito Web Raccomandazioni"
-            }
-        },
-        "en": {
-            "heroTitle": "Hi, I'm Alessio",
-            "heroSubtitle": "I transform ideas into digital reality through clean code and functional design",
-            "exploreProjects": "Explore Projects",
-            "contactMe": "Contact Me",
-            "greeting": "Hi, I'm Alessio Cocco!",
-            "aboutTitle": "About Me",
-            "aboutText": "I'm a Computer Engineering student with a passion for technology and design. Besides being a property manager, I dedicate myself to creating websites, apps, and games that combine functionality and creativity. Check out my projects below and discover how I bring ideas to digital life!",
-            "skillsTitle": "Skills & Technologies",
-            "skillsSubtitle": "The technologies I work with to create incredible digital experiences",
-            "portfolioTitle": "My Work",
-            "portfolioSubtitle": "A selection of my most significant projects",
-            "contactTitle": "Contact",
-            "contactText": "For collaborations or questions, contact me here:",
-            "sendMessage": "Send a message",
-            "contactLabels": {
-                "email": "Email",
-                "github": "GitHub"
-            },
-            "yourName": "Your name",
-            "yourEmail": "Your email",
-            "yourMessage": "Your message",
-            "sendButton": "Send Message",
-            "navigation": {
-                "about": "About Me",
-                "skills": "Skills",
-                "portfolio": "My Work",
-                "contact": "Contact"
-            },
-            "stats": {
-                "projects": "Projects",
-                "experience": "Years of Experience",
-                "technologies": "Technologies"
-            },
-            "footer": "© 2024 Alessio Cocco. All rights reserved.",
-            "chatbotPlaceholder": "Type here...",
-            "chatbotTitle": "Chatbot",
-            "skills": {
-                "javascript": { "title": "JavaScript", "description": "Dynamic and interactive development" },
-                "htmlcss": { "title": "HTML & CSS", "description": "Structure and responsive design" },
-                "unity": { "title": "Unity", "description": "Game development" },
-                "backend": { "title": "Backend", "description": "Server and application logic" },
-                "github": { "title": "Git & GitHub", "description": "Version control and collaboration" },
-                "responsive": { "title": "Responsive Design", "description": "Design for all devices" }
-            },
-            "project1": {
-                "title": "Project 1: Web App",
-                "role": "Role: Ideation and complete development",
-                "description": "An interactive project created for a workshop, developed entirely by hand in just 5 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
-                "technologies": "Technologies",
-                "viewProject": "View project",
-                "altText": "Web App Biancaneve"
-            },
-            "project2": {
-                "title": "Project 2: Video Game 1",
-                "role": "Role: Server-side programming and online functionality management",
-                "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
-                "technologies": "Technologies",
-                "viewProject": "View project",
-                "altText": "Video Game Distorti"
-            },
-            "project3": {
-                "title": "Project 3: Website",
-                "role": "Role: Development and complete design",
-                "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
-                "technologies": "Technologies",
-                "viewProject": "View project",
-                "altText": "Website Recommendations"
-            }
-        }
-    };
-
-    function loadTranslations(lang) {
-        console.log('🔄 Loading translations for:', lang);
+    // ONE simple function that loads from JSON and applies translations
+    async function loadAndApplyTranslations(lang) {
+        console.log('🌍 Loading translations for:', lang);
         
-        // Try to load from JSON file first, then fallback to embedded data
-        fetch("translations.json")
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.json();
-            })
-            .then(data => {
-                console.log('✅ Translations loaded from JSON file:', data);
-                applyTranslations(data[lang]);
-            })
-            .catch(error => {
-                console.log('⚠️ JSON file failed, using embedded translations:', error);
-                applyTranslations(translationsData[lang]);
-            });
-    }
-
-    function applyTranslations(t) {
-        if (!t) {
-            console.error('❌ No translation data available');
-            return;
-        }
-        
-        console.log('🎯 Applying translations:', t);
-        
-        // Helper function to safely update text content
-        const updateText = (selector, text) => {
-            const element = document.querySelector(selector);
-            if (element && text) element.textContent = text;
-        };
-        
-        const updateHTML = (selector, html) => {
-            const element = document.querySelector(selector);
-            if (element && html) element.innerHTML = html;
-        };
-        
-        // Update Hero Section
-        updateText(".hero-title .gradient-text", t.heroTitle);
-        updateText(".hero-subtitle", t.heroSubtitle);
-        updateHTML('.btn-primary', `<i class="fas fa-rocket"></i> ${t.exploreProjects}`);
-        updateHTML('.btn-secondary', `<i class="fas fa-envelope"></i> ${t.contactMe}`);
-        
-        // Update About Section
-        updateText("#about .section-title", t.aboutTitle);
-        updateText("#about .about-text .lead", t.greeting);
-        const aboutParagraphs = document.querySelectorAll("#about .about-text p");
-        if (aboutParagraphs[1]) aboutParagraphs[1].textContent = t.aboutText;
-        
-        // Update Stats
-        const statLabels = document.querySelectorAll(".stat-label");
-        if (statLabels.length >= 3 && t.stats) {
-            statLabels[0].textContent = t.stats.projects;
-            statLabels[1].textContent = t.stats.experience;
-            statLabels[2].textContent = t.stats.technologies;
-        }
-        
-        // Update Skills Section
-        updateText("#skills .section-title", t.skillsTitle);
-        updateText("#skills .section-subtitle", t.skillsSubtitle);
-        
-        // Update Skills Cards
-        const skillCards = document.querySelectorAll(".skill-card");
-        const skillKeys = ['javascript', 'htmlcss', 'unity', 'backend', 'github', 'responsive'];
-        
-        skillCards.forEach((card, index) => {
-            const skillKey = skillKeys[index];
-            if (t.skills && t.skills[skillKey]) {
-                updateText(card.querySelector("h3"), t.skills[skillKey].title);
-                updateText(card.querySelector("p"), t.skills[skillKey].description);
-            }
-        });
-        
-        // Update Portfolio Section
-        updateText("#portfolio .section-title", t.portfolioTitle);
-        updateText("#portfolio .section-subtitle", t.portfolioSubtitle);
-        
-        // Update Projects
-        const projectCards = document.querySelectorAll(".project-card");
-        for (let i = 0; i < projectCards.length; i++) {
-            const projectKey = `project${i + 1}`;
-            const project = t[projectKey];
+        try {
+            const response = await fetch('translations.json');
+            const translations = await response.json();
+            const t = translations[lang];
             
-            if (project) {
-                const card = projectCards[i];
-                updateText(card.querySelector("h3"), project.title);
-                
-                const role = card.querySelector(".project-role");
-                if (role && project.role) {
-                    role.innerHTML = `<strong>${project.role}</strong>`;
-                }
-                
-                updateText(card.querySelector(".project-description"), project.description);
-                updateHTML(card.querySelector(".project-btn"), `${project.viewProject} <i class="fas fa-arrow-right"></i>`);
-                
-                // Update image alt text
-                const projectImg = card.querySelector(".project-image img");
-                if (projectImg && project.altText) {
-                    projectImg.alt = project.altText;
-                }
+            if (!t) {
+                console.error('❌ Language not found:', lang);
+                return;
             }
-        }
-        
-        // Update Contact Section
-        updateText("#contact .section-title", t.contactTitle);
-        updateText("#contact .section-subtitle", t.contactText);
-        updateText(".contact-form h3", t.sendMessage);
-        
-        // Update Contact Labels
-        const contactLabels = document.querySelectorAll(".contact-details h3");
-        if (contactLabels.length >= 2 && t.contactLabels) {
-            contactLabels[0].textContent = t.contactLabels.email;
-            contactLabels[1].textContent = t.contactLabels.github;
-        }
-        
-        // Update Form placeholders
-        const nameInput = document.querySelector('input[type="text"]');
-        if (nameInput) nameInput.placeholder = t.yourName;
-        
-        const emailInput = document.querySelector('input[type="email"]');
-        if (emailInput) emailInput.placeholder = t.yourEmail;
-        
-        const messageInput = document.querySelector('textarea');
-        if (messageInput) messageInput.placeholder = t.yourMessage;
-        
-        const formButton = document.querySelector('.contact-form button[type="submit"]');
-        if (formButton && t.sendButton) {
-            formButton.innerHTML = `<i class="fas fa-paper-plane"></i> ${t.sendButton}`;
-        }
-        
-        // Update Navigation Menu
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        if (t.navigation && navLinks.length >= 4) {
-            navLinks[0].textContent = t.navigation.about;
-            navLinks[1].textContent = t.navigation.skills;
-            navLinks[2].textContent = t.navigation.portfolio;
-            navLinks[3].textContent = t.navigation.contact;
-        }
-        
-        // Update Footer
-        const footerText = document.querySelector(".footer-text p");
-        if (footerText && t.footer) {
-            footerText.textContent = t.footer;
-        }
-        
-        // Update Chatbot placeholder and header
-        const chatbotInput = document.querySelector("#chatbot-input");
-        if (chatbotInput && t.chatbotPlaceholder) {
-            chatbotInput.placeholder = t.chatbotPlaceholder;
-        }
-        
-        const chatbotHeader = document.querySelector("#chatbot-header span");
-        if (chatbotHeader && t.chatbotTitle) {
-            chatbotHeader.textContent = t.chatbotTitle;
+
+            console.log('✅ Translations loaded from JSON:', t);
+            
+            // Helper function
+            const updateElement = (selector, value, isHTML = false) => {
+                const element = document.querySelector(selector);
+                if (element && value !== undefined) {
+                    if (isHTML) {
+                        element.innerHTML = value;
+                    } else {
+                        element.textContent = value;
+                    }
+                    console.log(`✅ Updated ${selector}: ${value}`);
+                } else {
+                    console.warn(`⚠️ Element not found or value missing: ${selector}`);
+                }
+            };
+
+            // Apply all translations using the JSON structure
+            updateElement('.hero-title .gradient-text', t.heroTitle);
+            updateElement('.hero-subtitle', t.heroSubtitle);
+            updateElement('.btn-primary', `<i class="fas fa-rocket"></i> ${t.exploreProjects}`, true);
+            updateElement('.btn-secondary', `<i class="fas fa-envelope"></i> ${t.contactMe}`, true);
+            
+            // Navigation - using the JSON structure
+            updateElement('a[href="#about"]', t.navigation.about);
+            updateElement('a[href="#skills"]', t.navigation.skills);
+            updateElement('a[href="#portfolio"]', t.navigation.portfolio);
+            updateElement('a[href="#contact"]', t.navigation.contact);
+            
+            // About section
+            updateElement('#about .section-title', t.aboutTitle);
+            updateElement('#about .about-text .lead', t.greeting);
+            updateElement('#about .about-text p:nth-child(2)', t.aboutText);
+            
+            // Stats - using JSON structure
+            const statLabels = document.querySelectorAll('.stat-label');
+            if (statLabels[0] && t.stats) statLabels[0].textContent = t.stats.projects;
+            if (statLabels[1] && t.stats) statLabels[1].textContent = t.stats.experience;
+            if (statLabels[2] && t.stats) statLabels[2].textContent = t.stats.technologies;
+            
+            // Skills - using JSON structure
+            updateElement('#skills .section-title', t.skillsTitle);
+            updateElement('#skills .section-subtitle', t.skillsSubtitle);
+            
+            const skillCards = document.querySelectorAll('.skill-card');
+            const skillKeys = ['javascript', 'htmlcss', 'unity', 'backend', 'github', 'responsive'];
+            
+            skillCards.forEach((card, i) => {
+                const skillData = t.skills[skillKeys[i]];
+                if (skillData) {
+                    const titleEl = card.querySelector('h3');
+                    const descEl = card.querySelector('p');
+                    if (titleEl) titleEl.textContent = skillData.title;
+                    if (descEl) descEl.textContent = skillData.description;
+                }
+            });
+            
+            // Portfolio - using JSON structure
+            updateElement('#portfolio .section-title', t.portfolioTitle);
+            updateElement('#portfolio .section-subtitle', t.portfolioSubtitle);
+            
+            // Projects - FIXED: using correct selectors for project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            ['project1', 'project2', 'project3'].forEach((projectKey, i) => {
+                const project = t[projectKey];
+                const card = projectCards[i];
+                
+                if (project && card) {
+                    // Updated selectors to match actual HTML structure
+                    const titleEl = card.querySelector('.project-content h3');
+                    const roleEl = card.querySelector('.project-role');
+                    const descEl = card.querySelector('.project-description');
+                    const btnEl = card.querySelector('.project-btn');
+                    
+                    if (titleEl) titleEl.textContent = project.title;
+                    if (roleEl) roleEl.innerHTML = `<strong>${project.roleLabel}</strong> ${project.role}`;
+                    if (descEl) descEl.textContent = project.description;
+                    if (btnEl) btnEl.innerHTML = `${project.viewProject} <i class="fas fa-arrow-right"></i>`;
+                }
+            });
+            
+            // Contact - FIXED: using correct selectors
+            updateElement('#contact .section-title', t.contactTitle);
+            updateElement('#contact .section-subtitle', t.contactText);
+            updateElement('.contact-form h3', t.sendMessage);
+            
+            // Form - FIXED: using more specific selectors
+            const nameInput = document.querySelector('.contact-form input[type="text"]');
+            if (nameInput) nameInput.placeholder = t.yourName;
+            
+            const emailInput = document.querySelector('.contact-form input[type="email"]');
+            if (emailInput) emailInput.placeholder = t.yourEmail;
+            
+            const messageInput = document.querySelector('.contact-form textarea');
+            if (messageInput) messageInput.placeholder = t.yourMessage;
+            
+            const formButton = document.querySelector('.contact-form button[type="submit"]');
+            if (formButton) formButton.innerHTML = `<i class="fas fa-paper-plane"></i> ${t.sendButton}`;
+            
+            // Footer translation
+            const footerText = document.querySelector('.footer-text p');
+            if (footerText && t.footer) footerText.textContent = t.footer;
+            
+            console.log('✅ All translations applied successfully');
+            
+        } catch (error) {
+            console.error('❌ Error loading translations:', error);
         }
     }
 
-    // Change language on click
+    // Language switcher
     languageSelector.forEach(flag => {
         flag.addEventListener("click", () => {
             currentLang = flag.id;
-            loadTranslations(currentLang);
+            loadAndApplyTranslations(currentLang);
+            
             // Update flag states
             languageSelector.forEach(f => f.classList.remove('active'));
             flag.classList.add('active');
             
-            // Sync with chatbot language
-            if (window.setChatbotLanguage) {
-                window.setChatbotLanguage(currentLang);
-            }
+            console.log('🔄 Language changed to:', currentLang);
         });
     });
 
-    // Load default language on page load
-    loadTranslations(currentLang);
+    // Load default language
+    loadAndApplyTranslations(currentLang);
+    
+    // Set initial flag state
+    document.getElementById(currentLang)?.classList.add('active');
 });
 
 // ===== CHATBOT FUNCTIONALITY =====
@@ -406,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
         } else {
             message.innerHTML = text;
-            chatbotMessages.appendChild(message);
+        chatbotMessages.appendChild(message);
         }
         
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
@@ -698,3 +522,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
