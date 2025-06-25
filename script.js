@@ -2,115 +2,254 @@ document.addEventListener("DOMContentLoaded", () => {
     const languageSelector = document.querySelectorAll(".flag");
     let currentLang = "it"; // Default language
 
+    // Embedded translations as fallback for GitHub Pages
+    const translationsData = {
+        "it": {
+            "heroTitle": "Ciao, sono Alessio",
+            "heroSubtitle": "Trasformo idee in realtà digitale attraverso codice pulito e design funzionale",
+            "exploreProjects": "Esplora i Progetti",
+            "contactMe": "Contattami",
+            "greeting": "Salve, sono Alessio Cocco!",
+            "aboutTitle": "Chi Sono",
+            "aboutText": "Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
+            "skillsTitle": "Skills & Tecnologie",
+            "skillsSubtitle": "Le tecnologie con cui lavoro per creare esperienze digitali incredibili",
+            "portfolioTitle": "I Miei Lavori",
+            "portfolioSubtitle": "Una selezione dei miei progetti più significativi",
+            "contactTitle": "Contatti",
+            "contactText": "Per collaborazioni o domande, contattami qui:",
+            "sendMessage": "Invia un messaggio",
+            "yourName": "Il tuo nome",
+            "yourEmail": "La tua email",
+            "yourMessage": "Il tuo messaggio",
+            "sendButton": "Invia Messaggio",
+            "navigation": {
+                "about": "Chi Sono",
+                "skills": "Skills",
+                "portfolio": "I Miei Lavori",
+                "contact": "Contatti"
+            },
+            "stats": {
+                "projects": "Progetti",
+                "experience": "Anni di Esperienza",
+                "technologies": "Tecnologie"
+            },
+            "skills": {
+                "javascript": { "title": "JavaScript", "description": "Sviluppo dinamico e interattivo" },
+                "htmlcss": { "title": "HTML & CSS", "description": "Struttura e design responsive" },
+                "unity": { "title": "Unity", "description": "Sviluppo di videogiochi" },
+                "backend": { "title": "Backend", "description": "Server e logica applicativa" },
+                "github": { "title": "Git & GitHub", "description": "Controllo versioni e collaborazione" },
+                "responsive": { "title": "Responsive Design", "description": "Design per tutti i dispositivi" }
+            },
+            "project1": {
+                "title": "Progetto 1: Web App",
+                "role": "Ruolo: Ideazione e sviluppo completo",
+                "description": "Un progetto interattivo creato per un laboratorio, sviluppato interamente a mano in soli 5 giorni. Il gioco combina una narrativa coinvolgente con elementi di interazione basati su JavaScript, con supporto di HTML e CSS per il design e la struttura visiva.",
+                "technologies": "Tecnologie",
+                "viewProject": "Guarda il progetto"
+            },
+            "project2": {
+                "title": "Progetto 2: Videogioco 1",
+                "role": "Ruolo: Programmazione lato server e gestione funzionalità online",
+                "description": "Un gioco multiplayer sviluppato in team, pubblicato su Itch.io. Mi sono occupato del miglioramento della logica di scelta randomica e della gestione del server-client. Abbiamo utilizzato il tool Photon per implementare le funzionalità online, assicurando un'esperienza fluida per i giocatori.",
+                "technologies": "Tecnologie",
+                "viewProject": "Guarda il progetto"
+            },
+            "project3": {
+                "title": "Progetto 3: Sito Web",
+                "role": "Ruolo: Sviluppo e progettazione completa",
+                "description": "Un sito web creato per fornire ai miei ospiti raccomandazioni su cosa fare durante il soggiorno. Il sito è multilingue e supporta traduzioni dinamiche grazie all'uso di JSON. La struttura e il design sono stati interamente realizzati con HTML, CSS e JavaScript.",
+                "technologies": "Tecnologie",
+                "viewProject": "Guarda il progetto"
+            }
+        },
+        "en": {
+            "heroTitle": "Hi, I'm Alessio",
+            "heroSubtitle": "I transform ideas into digital reality through clean code and functional design",
+            "exploreProjects": "Explore Projects",
+            "contactMe": "Contact Me",
+            "greeting": "Hi, I'm Alessio Cocco!",
+            "aboutTitle": "About Me",
+            "aboutText": "I'm a Computer Engineering student with a passion for technology and design. Besides being a property manager, I dedicate myself to creating websites, apps, and games that combine functionality and creativity. Check out my projects below and discover how I bring ideas to digital life!",
+            "skillsTitle": "Skills & Technologies",
+            "skillsSubtitle": "The technologies I work with to create incredible digital experiences",
+            "portfolioTitle": "My Work",
+            "portfolioSubtitle": "A selection of my most significant projects",
+            "contactTitle": "Contact",
+            "contactText": "For collaborations or questions, contact me here:",
+            "sendMessage": "Send a message",
+            "yourName": "Your name",
+            "yourEmail": "Your email",
+            "yourMessage": "Your message",
+            "sendButton": "Send Message",
+            "navigation": {
+                "about": "About Me",
+                "skills": "Skills",
+                "portfolio": "My Work",
+                "contact": "Contact"
+            },
+            "stats": {
+                "projects": "Projects",
+                "experience": "Years of Experience",
+                "technologies": "Technologies"
+            },
+            "skills": {
+                "javascript": { "title": "JavaScript", "description": "Dynamic and interactive development" },
+                "htmlcss": { "title": "HTML & CSS", "description": "Structure and responsive design" },
+                "unity": { "title": "Unity", "description": "Game development" },
+                "backend": { "title": "Backend", "description": "Server and application logic" },
+                "github": { "title": "Git & GitHub", "description": "Version control and collaboration" },
+                "responsive": { "title": "Responsive Design", "description": "Design for all devices" }
+            },
+            "project1": {
+                "title": "Project 1: Web App",
+                "role": "Role: Ideation and complete development",
+                "description": "An interactive project created for a workshop, developed entirely by hand in just 5 days. The game combines engaging storytelling with interactive elements based on JavaScript, supported by HTML and CSS for visual design and structure.",
+                "technologies": "Technologies",
+                "viewProject": "View project"
+            },
+            "project2": {
+                "title": "Project 2: Video Game 1",
+                "role": "Role: Server-side programming and online functionality management",
+                "description": "A multiplayer game developed as a team, published on Itch.io. I worked on improving the random choice logic and managing the server-client communication. We used Photon to implement online features, ensuring a smooth player experience.",
+                "technologies": "Technologies",
+                "viewProject": "View project"
+            },
+            "project3": {
+                "title": "Project 3: Website",
+                "role": "Role: Development and complete design",
+                "description": "A website created to provide my guests with recommendations on what to do during their stay. The site is multilingual and supports dynamic translations using JSON. The structure and design were entirely crafted with HTML, CSS, and JavaScript.",
+                "technologies": "Technologies",
+                "viewProject": "View project"
+            }
+        }
+    };
+
     function loadTranslations(lang) {
         console.log('🔄 Loading translations for:', lang);
+        
+        // Try to load from JSON file first, then fallback to embedded data
         fetch("translations.json")
-            .then(response => response.json())
-            .then(data => {
-                console.log('✅ Translations loaded:', data);
-                const t = data[lang]; // Clean alias for translations
-                console.log('🎯 Current language data:', t);
-                
-                // Helper function to safely update text content
-                const updateText = (selector, text) => {
-                    const element = document.querySelector(selector);
-                    if (element && text) element.textContent = text;
-                };
-                
-                const updateHTML = (selector, html) => {
-                    const element = document.querySelector(selector);
-                    if (element && html) element.innerHTML = html;
-                };
-                
-                // Update Hero Section
-                updateText(".hero-title .gradient-text", t.heroTitle);
-                updateText(".hero-subtitle", t.heroSubtitle);
-                updateHTML('.btn-primary', `<i class="fas fa-rocket"></i> ${t.exploreProjects}`);
-                updateHTML('.btn-secondary', `<i class="fas fa-envelope"></i> ${t.contactMe}`);
-                
-                // Update About Section
-                updateText("#about .section-title", t.aboutTitle);
-                updateText("#about .about-text .lead", t.greeting);
-                const aboutParagraphs = document.querySelectorAll("#about .about-text p");
-                if (aboutParagraphs[1]) aboutParagraphs[1].textContent = t.aboutText;
-                
-                // Update Stats
-                const statLabels = document.querySelectorAll(".stat-label");
-                if (statLabels.length >= 3 && t.stats) {
-                    statLabels[0].textContent = t.stats.projects;
-                    statLabels[1].textContent = t.stats.experience;
-                    statLabels[2].textContent = t.stats.technologies;
-                }
-                
-                // Update Skills Section
-                updateText("#skills .section-title", t.skillsTitle);
-                updateText("#skills .section-subtitle", t.skillsSubtitle);
-                
-                // Update Skills Cards
-                const skillCards = document.querySelectorAll(".skill-card");
-                const skillKeys = ['javascript', 'htmlcss', 'unity', 'backend', 'github', 'responsive'];
-                
-                skillCards.forEach((card, index) => {
-                    const skillKey = skillKeys[index];
-                    if (t.skills && t.skills[skillKey]) {
-                        updateText(card.querySelector("h3"), t.skills[skillKey].title);
-                        updateText(card.querySelector("p"), t.skills[skillKey].description);
-                    }
-                });
-                
-                // Update Portfolio Section
-                updateText("#portfolio .section-title", t.portfolioTitle);
-                updateText("#portfolio .section-subtitle", t.portfolioSubtitle);
-                
-                // Update Projects
-                const projectCards = document.querySelectorAll(".project-card");
-                for (let i = 0; i < projectCards.length; i++) {
-                    const projectKey = `project${i + 1}`;
-                    const project = t[projectKey];
-                    
-                    if (project) {
-                        const card = projectCards[i];
-                        updateText(card.querySelector("h3"), project.title);
-                        
-                        const role = card.querySelector(".project-role");
-                        if (role) {
-                            const roleParts = project.role.split(':');
-                            role.innerHTML = `<strong>${roleParts[0]}:</strong>${roleParts[1] || ''}`;
-                        }
-                        
-                        updateText(card.querySelector(".project-description"), project.description);
-                        updateHTML(card.querySelector(".project-btn"), `${project.viewProject} <i class="fas fa-arrow-right"></i>`);
-                    }
-                }
-                
-                // Update Contact Section
-                updateText("#contact .section-title", t.contactTitle);
-                updateText("#contact .section-subtitle", t.contactText);
-                updateText(".contact-form h3", t.sendMessage);
-                
-                // Update Form placeholders
-                const nameInput = document.querySelector('input[type="text"]');
-                if (nameInput) nameInput.placeholder = t.yourName;
-                
-                const emailInput = document.querySelector('input[type="email"]');
-                if (emailInput) emailInput.placeholder = t.yourEmail;
-                
-                const messageInput = document.querySelector('textarea');
-                if (messageInput) messageInput.placeholder = t.yourMessage;
-                
-                updateHTML('.contact-form .btn', `<i class="fas fa-paper-plane"></i> ${t.sendButton}`);
-                
-                // Update Navigation Menu
-                const navLinks = document.querySelectorAll('.nav-menu a');
-                if (t.navigation && navLinks.length >= 4) {
-                    navLinks[0].textContent = t.navigation.about;
-                    navLinks[1].textContent = t.navigation.skills;
-                    navLinks[2].textContent = t.navigation.portfolio;
-                    navLinks[3].textContent = t.navigation.contact;
-                }
-                
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
             })
-            .catch(error => console.error('Translation loading error:', error));
+            .then(data => {
+                console.log('✅ Translations loaded from JSON file:', data);
+                applyTranslations(data[lang]);
+            })
+            .catch(error => {
+                console.log('⚠️ JSON file failed, using embedded translations:', error);
+                applyTranslations(translationsData[lang]);
+            });
+    }
+
+    function applyTranslations(t) {
+        if (!t) {
+            console.error('❌ No translation data available');
+            return;
+        }
+        
+        console.log('🎯 Applying translations:', t);
+        
+        // Helper function to safely update text content
+        const updateText = (selector, text) => {
+            const element = document.querySelector(selector);
+            if (element && text) element.textContent = text;
+        };
+        
+        const updateHTML = (selector, html) => {
+            const element = document.querySelector(selector);
+            if (element && html) element.innerHTML = html;
+        };
+        
+        // Update Hero Section
+        updateText(".hero-title .gradient-text", t.heroTitle);
+        updateText(".hero-subtitle", t.heroSubtitle);
+        updateHTML('.btn-primary', `<i class="fas fa-rocket"></i> ${t.exploreProjects}`);
+        updateHTML('.btn-secondary', `<i class="fas fa-envelope"></i> ${t.contactMe}`);
+        
+        // Update About Section
+        updateText("#about .section-title", t.aboutTitle);
+        updateText("#about .about-text .lead", t.greeting);
+        const aboutParagraphs = document.querySelectorAll("#about .about-text p");
+        if (aboutParagraphs[1]) aboutParagraphs[1].textContent = t.aboutText;
+        
+        // Update Stats
+        const statLabels = document.querySelectorAll(".stat-label");
+        if (statLabels.length >= 3 && t.stats) {
+            statLabels[0].textContent = t.stats.projects;
+            statLabels[1].textContent = t.stats.experience;
+            statLabels[2].textContent = t.stats.technologies;
+        }
+        
+        // Update Skills Section
+        updateText("#skills .section-title", t.skillsTitle);
+        updateText("#skills .section-subtitle", t.skillsSubtitle);
+        
+        // Update Skills Cards
+        const skillCards = document.querySelectorAll(".skill-card");
+        const skillKeys = ['javascript', 'htmlcss', 'unity', 'backend', 'github', 'responsive'];
+        
+        skillCards.forEach((card, index) => {
+            const skillKey = skillKeys[index];
+            if (t.skills && t.skills[skillKey]) {
+                updateText(card.querySelector("h3"), t.skills[skillKey].title);
+                updateText(card.querySelector("p"), t.skills[skillKey].description);
+            }
+        });
+        
+        // Update Portfolio Section
+        updateText("#portfolio .section-title", t.portfolioTitle);
+        updateText("#portfolio .section-subtitle", t.portfolioSubtitle);
+        
+        // Update Projects
+        const projectCards = document.querySelectorAll(".project-card");
+        for (let i = 0; i < projectCards.length; i++) {
+            const projectKey = `project${i + 1}`;
+            const project = t[projectKey];
+            
+            if (project) {
+                const card = projectCards[i];
+                updateText(card.querySelector("h3"), project.title);
+                
+                const role = card.querySelector(".project-role");
+                if (role) {
+                    const roleParts = project.role.split(':');
+                    role.innerHTML = `<strong>${roleParts[0]}:</strong>${roleParts[1] || ''}`;
+                }
+                
+                updateText(card.querySelector(".project-description"), project.description);
+                updateHTML(card.querySelector(".project-btn"), `${project.viewProject} <i class="fas fa-arrow-right"></i>`);
+            }
+        }
+        
+        // Update Contact Section
+        updateText("#contact .section-title", t.contactTitle);
+        updateText("#contact .section-subtitle", t.contactText);
+        updateText(".contact-form h3", t.sendMessage);
+        
+        // Update Form placeholders
+        const nameInput = document.querySelector('input[type="text"]');
+        if (nameInput) nameInput.placeholder = t.yourName;
+        
+        const emailInput = document.querySelector('input[type="email"]');
+        if (emailInput) emailInput.placeholder = t.yourEmail;
+        
+        const messageInput = document.querySelector('textarea');
+        if (messageInput) messageInput.placeholder = t.yourMessage;
+        
+        updateHTML('.contact-form .btn', `<i class="fas fa-paper-plane"></i> ${t.sendButton}`);
+        
+        // Update Navigation Menu
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        if (t.navigation && navLinks.length >= 4) {
+            navLinks[0].textContent = t.navigation.about;
+            navLinks[1].textContent = t.navigation.skills;
+            navLinks[2].textContent = t.navigation.portfolio;
+            navLinks[3].textContent = t.navigation.contact;
+        }
     }
 
     // Change language on click
@@ -133,6 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTranslations(currentLang);
 });
 
+// ===== CHATBOT FUNCTIONALITY =====
 document.addEventListener("DOMContentLoaded", () => {
     const chatbotToggle = document.getElementById("chatbot-toggle");
     const chatbotContainer = document.getElementById("chatbot-container");
@@ -158,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
             defaultResponse: "For further information, provide ProjectName Topic. The project names are Biancaneve, Distorti, and Recommendations. The topics are Role, Why, and Issues.",
             thinking: "🤔 I'm thinking...",
             error: "😅 Sorry, I didn't understand. Can you try again?"
-        },
+        }
     };
 
     // Enhanced responses map
@@ -371,136 +511,138 @@ document.addEventListener("DOMContentLoaded", () => {
     setLanguage(currentLanguage);
 });
 
-// ===== PERFORMANCE OPTIMIZATIONS =====
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
+// ===== SCROLL ANIMATIONS =====
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
+                entry.target.classList.add("fade-in-up");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll("section, .skill-card, .project-card").forEach(el => {
+        observer.observe(el);
+    });
+});
+
+// ===== HEADER SCROLL BEHAVIOR =====
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".modern-header");
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            header.style.background = "rgba(255, 255, 255, 0.98)";
+            header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+        } else {
+            header.style.background = "rgba(255, 255, 255, 0.95)";
+            header.style.boxShadow = "none";
+        }
+
+        if (scrollY > lastScrollY && scrollY > 300) {
+            header.style.transform = "translateY(-100%)";
+        } else {
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScrollY = scrollY;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestTick);
+});
+
+// ===== MOBILE MENU FUNCTIONALITY =====
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const body = document.body;
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            body.classList.remove("menu-open");
+        });
+    });
+});
+
+// ===== SMOOTH SCROLLING =====
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
             }
         });
     });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
-// ===== ANALYTICS & TRACKING =====
-// Track button clicks
-document.addEventListener('click', (e) => {
-    if (e.target.matches('.btn, .project-btn, .project-link')) {
-        console.log('Button clicked:', e.target.textContent.trim());
-        // Here you could add Google Analytics or other tracking
-    }
 });
 
-// ===== ERROR HANDLING =====
-window.addEventListener('error', (e) => {
-    console.error('Global error caught:', e.error);
-    // Graceful error handling without breaking the UI
-});
-
-// ===== ACCESSIBILITY ENHANCEMENTS =====
-// Focus management for keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-    }
-});
-
-document.addEventListener('mousedown', () => {
-    document.body.classList.remove('keyboard-navigation');
-});
-
-// Add focus styles
-const focusStyle = document.createElement('style');
-focusStyle.textContent = `
-    .keyboard-navigation *:focus {
-        outline: 2px solid var(--primary-color) !important;
-        outline-offset: 2px !important;
-    }
-`;
-document.head.appendChild(focusStyle);
-
-// ===== MOBILE MENU =====
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Toggle classes
-                this.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            });
+// ===== FORM HANDLING =====
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
             
-            // Close menu when clicking nav links
-            navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                });
-            });
+            const formData = new FormData(contactForm);
+            const name = formData.get("name") || document.querySelector('input[type="text"]').value;
+            const email = formData.get("email") || document.querySelector('input[type="email"]').value;
+            const message = formData.get("message") || document.querySelector('textarea').value;
+
+            // Create mailto link
+            const subject = `Portfolio Contact from ${name}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            const mailtoLink = `mailto:alessio.cocco@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            const button = contactForm.querySelector(".btn");
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Messaggio Inviato!';
+            button.style.background = '#10b981';
             
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                }
-            });
-        }
-    }, 100);
-});
-
-// ===== SCROLL EFFECTS =====
-// Dynamic header behavior
-let lastScrollTop = 0;
-const header = document.querySelector('.modern-header');
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = '';
+                contactForm.reset();
+            }, 3000);
+        });
     }
-    
-    lastScrollTop = scrollTop;
-});
-
-// Reveal animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
-        }
-    });
-}, observerOptions);
-
-// Observe all sections and cards
-document.querySelectorAll('.skill-card, .project-card, .contact-item, .stat-item').forEach(el => {
-    observer.observe(el);
 });
