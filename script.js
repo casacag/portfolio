@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateElement('#about .section-title', t.aboutTitle);
             updateElement('#about .about-text .lead', t.greeting);
             updateElement('#about .about-text p:nth-child(2)', t.aboutText);
-            
+            updateElement('#about .about-text p:nth-child(2)', t.aboutstr);
             // Stats - using JSON structure
             const statLabels = document.querySelectorAll('.stat-label');
             if (statLabels[0] && t.stats) statLabels[0].textContent = t.stats.projects;
