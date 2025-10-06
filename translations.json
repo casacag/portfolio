@@ -7,6 +7,7 @@
         "greeting": "Salve, sono Alessio Cocco!",
         "aboutTitle": "Chi Sono",
         "aboutText": "Sono un laureando in Ingegneria Informatica con una passione per la tecnologia e il design. Oltre a essere un property manager, mi dedico alla creazione di siti web, app e videogiochi che uniscono funzionalità e creatività. Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!",
+        "aboutstr": "Dai un'occhiata ai miei progetti qui sotto e scopri come trasformo idee in realtà digitale!"
         "skillsTitle": "Skills & Tecnologie",
         "skillsSubtitle": "Le tecnologie con cui lavoro per creare esperienze digitali incredibili",
         "portfolioTitle": "I Miei Lavori",
@@ -89,6 +90,7 @@
         "greeting": "Hi, I'm Alessio Cocco!",
         "aboutTitle": "About Me",
         "aboutText": "I'm a Computer Engineering student with a passion for technology and design. Besides being a property manager, I dedicate myself to creating websites, apps, and games that combine functionality and creativity. Check out my projects below and discover how I bring ideas to digital life!",
+        "aboutstr": "Take a look at my projects below and see how I turn ideas into digital reality!"
         "skillsTitle": "Skills & Technologies",
         "skillsSubtitle": "The technologies I work with to create incredible digital experiences",
         "portfolioTitle": "My Work",
