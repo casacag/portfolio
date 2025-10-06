@@ -51,17 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
             updateElement('#about .section-title', t.aboutTitle);
             
             // Prendi i paragrafi in ordine
-            const aboutBox = document.querySelector('#about .about-text');
-            const ps = aboutBox ? aboutBox.querySelectorAll('p') : [];
+            updateElement('#about .section-title', t.aboutTitle);
             
-            // p[0] = greeting (ha .lead ed è blu per CSS)
-            if (ps[0]) ps[0].textContent = t.greeting;
-            
-            // p[1] = aboutText (testo principale, NON blu)
-            if (ps[1]) ps[1].textContent = t.aboutText;
-            
-            // p[2] = aboutstr (frase extra/slogan)
-            if (ps[2]) ps[2].textContent = t.aboutstr;
+            // Paragrafi (classi dedicate)
+            updateElement('#about .about-text .lead', t.greeting);
+            updateElement('#about .about-text p:nth-of-type(2)', t.aboutText); // oppure dai una classe .about-main
+            updateElement('#about .about-text .about-extra', t.aboutstr);
            
             // Stats - using JSON structure
             const statLabels = document.querySelectorAll('.stat-label');
